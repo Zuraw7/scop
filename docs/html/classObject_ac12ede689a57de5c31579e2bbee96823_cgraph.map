@@ -1,0 +1,11 @@
+<map id="Object::updateRotationMatrixY" name="Object::updateRotationMatrixY">
+<area shape="rect" id="Node000001" title="Updates the object&#39;s rotation around its local Y axis." alt="" coords="5,80,228,105"/>
+<area shape="rect" id="Node000002" href="$matrixOperations_8cpp.html#a1e1bbdd420829f16ffff997480c3cc30" title="Returns a 4x4 identity matrix." alt="" coords="287,5,413,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,77,296,32,297,37,158,82"/>
+<area shape="rect" id="Node000003" href="$matrixOperations_8cpp.html#af7b80c3132eeb77e03594e884ad2aa92" title="Creates a rotation matrix for rotation around the Y&#45;axis." alt="" coords="276,55,424,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,78,262,74,262,79,229,83"/>
+<area shape="rect" id="Node000004" href="$matrixOperations_8cpp.html#a76d118ab7f488b1894ea56752c30fad2" title="Multiplies two 4x4 matrices." alt="" coords="291,104,409,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="229,101,278,107,277,112,228,107"/>
+<area shape="rect" id="Node000005" href="$matrixOperations_8cpp.html#ae174908cce46421f38469803bfa59f5a" title="Translates a 4x4 transformation matrix." alt="" coords="289,153,411,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="159,103,296,147,295,152,157,108"/>
+</map>

@@ -1,0 +1,81 @@
+\doxysection{Material Class Reference}
+\hypertarget{classMaterial}{}\label{classMaterial}\index{Material@{Material}}
+
+
+Loads and applies material parameters.  
+
+
+
+
+{\ttfamily \#include $<$Material.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classMaterial_a761294ad580aaed7e111de4a09b69e6c}\label{classMaterial_a761294ad580aaed7e111de4a09b69e6c} 
+{\bfseries Material} (const \mbox{\hyperlink{classMaterial}{Material}} \&other)=delete
+\item 
+\Hypertarget{classMaterial_a851aca9405ff1d5a457b6298883a4fc5}\label{classMaterial_a851aca9405ff1d5a457b6298883a4fc5} 
+{\bfseries Material} (\mbox{\hyperlink{classMaterial}{Material}} \&\&other) noexcept
+\item 
+\Hypertarget{classMaterial_aee744bf39e25649c555cf83636c66a3f}\label{classMaterial_aee744bf39e25649c555cf83636c66a3f} 
+\mbox{\hyperlink{classMaterial}{Material}} \& {\bfseries operator=} (const \mbox{\hyperlink{classMaterial}{Material}} \&other)=delete
+\item 
+\Hypertarget{classMaterial_ab8c392b94a479f70ae75f9f95d1de306}\label{classMaterial_ab8c392b94a479f70ae75f9f95d1de306} 
+\mbox{\hyperlink{classMaterial}{Material}} \& {\bfseries operator=} (\mbox{\hyperlink{classMaterial}{Material}} \&\&other) noexcept
+\item 
+void \mbox{\hyperlink{classMaterial_a8a0364a72009f7a6d83016008534e3ab}{apply}} (\mbox{\hyperlink{classShader}{Shader}} \&shader)
+\begin{DoxyCompactList}\small\item\em Sends material parameters to the shader. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classMaterial}{Material}} $>$ \mbox{\hyperlink{classMaterial_a96bd53def228f1cccec83b15f1bb2e22}{create}} (const std\+::string \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Creates a material from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Loads and applies material parameters. 
+
+Parses a material file, stores its parameters and uploads them to a shader for rendering. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMaterial_a8a0364a72009f7a6d83016008534e3ab}\label{classMaterial_a8a0364a72009f7a6d83016008534e3ab} 
+\index{Material@{Material}!apply@{apply}}
+\index{apply@{apply}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily void Material\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classShader}{Shader}} \&}]{shader }\end{DoxyParamCaption})}
+
+
+
+Sends material parameters to the shader. 
+
+Uploads key lighting properties such as ambient, diffuse, specular components and shininess to the shader uniforms. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMaterial_a8a0364a72009f7a6d83016008534e3ab_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classMaterial_a96bd53def228f1cccec83b15f1bb2e22}\label{classMaterial_a96bd53def228f1cccec83b15f1bb2e22} 
+\index{Material@{Material}!create@{create}}
+\index{create@{create}!Material@{Material}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classMaterial}{Material}} $>$ Material\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a material from a file. 
+
+Loads material parameters from the given path; if loading fails, initializes the material with default values. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classMaterial_a96bd53def228f1cccec83b15f1bb2e22_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/textures/\mbox{\hyperlink{Material_8hpp}{Material.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/textures/\mbox{\hyperlink{Material_8cpp}{Material.\+cpp}}\end{DoxyCompactItemize}

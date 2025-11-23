@@ -1,0 +1,7 @@
+<map id="Object::create" name="Object::create">
+<area shape="rect" id="Node000001" title="Creates and initializes an Object from a .obj file." alt="" coords="5,31,119,56"/>
+<area shape="rect" id="Node000002" href="$classMaterial.html#a96bd53def228f1cccec83b15f1bb2e22" title="Creates a material from a file." alt="" coords="167,5,293,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,32,154,27,154,32,119,37"/>
+<area shape="rect" id="Node000003" href="$matrixOperations_8cpp.html#a1e1bbdd420829f16ffff997480c3cc30" title="Returns a 4x4 identity matrix." alt="" coords="167,55,293,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="119,49,153,54,152,59,118,54"/>
+</map>

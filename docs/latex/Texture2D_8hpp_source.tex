@@ -1,0 +1,43 @@
+\doxysection{Texture2\+D.\+hpp}
+\hypertarget{Texture2D_8hpp_source}{}\label{Texture2D_8hpp_source}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/textures/Texture2D.hpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/textures/Texture2D.hpp}}
+\mbox{\hyperlink{Texture2D_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SCOP\_TEXTURE\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SCOP\_TEXTURE\_HPP}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../3rd/stb\_image.h"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <GL/glew.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTexture2D}{Texture2D}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classTexture2D}{Texture2D}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<Texture2D>\ \mbox{\hyperlink{classTexture2D_a53873d77797966d77a5caa1eaa1f448a}{create}}(\textcolor{keyword}{const}\ std::string\ \&path,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ wrapS\ =\ GL\_MIRRORED\_REPEAT,}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ wrapT\ =\ GL\_MIRRORED\_REPEAT,}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ minFilter\ =\ GL\_LINEAR\_MIPMAP\_LINEAR,}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ magFilter\ =\ GL\_LINEAR);}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classTexture2D}{Texture2D}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTexture2D}{Texture2D}}\ \&other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classTexture2D}{Texture2D}}(\mbox{\hyperlink{classTexture2D}{Texture2D}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classTexture2D}{Texture2D}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTexture2D}{Texture2D}}\ \&other)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classTexture2D}{Texture2D}}\ \&operator=(\mbox{\hyperlink{classTexture2D}{Texture2D}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classTexture2D}{\string~Texture2D}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTexture2D_a8e1f4a12976d1a76547bea69cf4a738c}{bind}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ slot\ =\ 0)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ std::string\ \mbox{\hyperlink{classTexture2D_a0fece49baa70c5257db2e9ddf88b8fcd}{getPath}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_id;}
+\DoxyCodeLine{00048\ \ \ \ \ std::string\ m\_path;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_width,\ m\_height,\ m\_nrChannels;}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SCOP\_TEXTURE\_HPP}}
+
+\end{DoxyCode}

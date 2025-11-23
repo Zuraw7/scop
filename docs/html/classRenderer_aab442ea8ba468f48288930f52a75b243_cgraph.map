@@ -1,0 +1,10 @@
+<map id="Renderer::draw" name="Renderer::draw">
+<area shape="rect" id="Node000001" title="Draws given object using given shader. Binds all necessary object&#39;s information required by shader." alt="" coords="5,31,127,56"/>
+<area shape="rect" id="Node000002" href="$classShader.html#aadbc0ca0d899238d547f87f19461dfeb" title="Binds the shader program for use in the current OpenGL context." alt="" coords="351,5,453,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,28,174,15,259,10,337,11,337,17,259,16,175,21,111,33"/>
+<area shape="rect" id="Node000003" href="$classShader.html#ae4d767f702c70f4db38070a3e9b9e033" title="Sets a float uniform in the shader program." alt="" coords="175,31,303,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="127,41,161,41,161,46,127,46"/>
+<area shape="rect" id="Node000004" href="$classShader.html#a5b9da0e356ab46582b29f55a5d669c74" title="Unbinds the shader program from the current OpenGL context." alt="" coords="179,80,298,105"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="112,53,181,74,179,79,110,59"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="303,31,336,25,337,31,303,36"/>
+</map>

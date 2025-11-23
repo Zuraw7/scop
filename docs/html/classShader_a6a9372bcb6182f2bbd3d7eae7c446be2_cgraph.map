@@ -1,0 +1,5 @@
+<map id="Shader::setInt" name="Shader::setInt">
+<area shape="rect" id="Node000001" title="Sets an integer uniform in the shader program." alt="" coords="5,5,117,31"/>
+<area shape="rect" id="Node000002" href="$classShader.html#aadbc0ca0d899238d547f87f19461dfeb" title="Binds the shader program for use in the current OpenGL context." alt="" coords="165,5,268,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,15,152,15,152,21,117,21"/>
+</map>

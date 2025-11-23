@@ -1,0 +1,10 @@
+<map id="Material::apply" name="Material::apply">
+<area shape="rect" id="Node000001" title="Sends material parameters to the shader." alt="" coords="5,31,125,56"/>
+<area shape="rect" id="Node000002" href="$classShader.html#ae4d767f702c70f4db38070a3e9b9e033" title="Sets a float uniform in the shader program." alt="" coords="199,5,327,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,33,185,25,185,31,126,38"/>
+<area shape="rect" id="Node000004" href="$classShader.html#a5ccffe3b7a1c02d65113d631561b8120" title="Sets a vec3 uniform in the shader program." alt="" coords="173,55,352,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="126,48,160,52,160,57,125,53"/>
+<area shape="rect" id="Node000003" href="$classShader.html#aadbc0ca0d899238d547f87f19461dfeb" title="Binds the shader program for use in the current OpenGL context." alt="" coords="400,31,503,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="327,24,386,32,386,37,327,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="352,53,386,49,386,54,352,59"/>
+</map>

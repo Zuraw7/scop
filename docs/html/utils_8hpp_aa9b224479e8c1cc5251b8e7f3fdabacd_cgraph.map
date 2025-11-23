@@ -1,0 +1,7 @@
+<map id="scrollCallback" name="scrollCallback">
+<area shape="rect" id="Node000001" title="Callback function for scroll input." alt="" coords="5,5,119,31"/>
+<area shape="rect" id="Node000002" href="$classCamera.html#a132af0d5ebfd3753d1ad59fadebc8d81" title="Adjusts the camera&#39;s zoom (field of view)." alt="" coords="167,5,381,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,15,153,15,153,21,119,21"/>
+<area shape="rect" id="Node000003" href="$matrixOperations_8cpp.html#ac180e611998d6d9c55efa0cd55033f94" title="Creates a perspective projection matrix." alt="" coords="429,5,548,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="382,15,416,15,416,21,382,21"/>
+</map>

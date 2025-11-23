@@ -1,0 +1,139 @@
+\doxysection{/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/utils/callbacks.cpp File Reference}
+\hypertarget{callbacks_8cpp}{}\label{callbacks_8cpp}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/callbacks.cpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/callbacks.cpp}}
+
+
+File contains callback functions.  
+
+
+{\ttfamily \#include $<$GL/glew.\+h$>$}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include "{}../core/\+Camera.\+hpp"{}}\newline
+Include dependency graph for callbacks.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{callbacks_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{callbacks_8cpp_a09882d71c70e402a1d6179c914a001c2}{framebuffer\+Size\+Callback}} (GLFWwindow \texorpdfstring{$\ast$}{*}window, int width, int height)
+\begin{DoxyCompactList}\small\item\em Callback function for framebuffer size changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{callbacks_8cpp_ae49f0c4c2064be8fbcf555f46460b7df}{cursor\+Pos\+Callback}} (GLFWwindow \texorpdfstring{$\ast$}{*}window, double xpos, double ypos)
+\begin{DoxyCompactList}\small\item\em Callback function for mouse movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{callbacks_8cpp_aa9b224479e8c1cc5251b8e7f3fdabacd}{scroll\+Callback}} (GLFWwindow \texorpdfstring{$\ast$}{*}window, double xoffset, double yoffset)
+\begin{DoxyCompactList}\small\item\em Callback function for scroll input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{callbacks_8cpp_a1dfc8527218f1e47af8c1dc10e2a1ae4}\label{callbacks_8cpp_a1dfc8527218f1e47af8c1dc10e2a1ae4} 
+\mbox{\hyperlink{classCamera}{Camera}} {\bfseries g\+Camera}
+\item 
+\Hypertarget{callbacks_8cpp_ac21731ba101e28334c34543121caa841}\label{callbacks_8cpp_ac21731ba101e28334c34543121caa841} 
+bool {\bfseries first\+Mouse} = true
+\item 
+\Hypertarget{callbacks_8cpp_a02e3a1b901858994db673826761a2b4e}\label{callbacks_8cpp_a02e3a1b901858994db673826761a2b4e} 
+double {\bfseries lastX} = 0.\+0f
+\item 
+\Hypertarget{callbacks_8cpp_a04eb776b2ebceace641072dabd564d08}\label{callbacks_8cpp_a04eb776b2ebceace641072dabd564d08} 
+double {\bfseries lastY} = 0.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File contains callback functions. 
+
+\begin{DoxyAuthor}{Author}
+Patryk 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/11-\/2025
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{callbacks_8cpp_ae49f0c4c2064be8fbcf555f46460b7df}\label{callbacks_8cpp_ae49f0c4c2064be8fbcf555f46460b7df} 
+\index{callbacks.cpp@{callbacks.cpp}!cursorPosCallback@{cursorPosCallback}}
+\index{cursorPosCallback@{cursorPosCallback}!callbacks.cpp@{callbacks.cpp}}
+\doxysubsubsection{\texorpdfstring{cursorPosCallback()}{cursorPosCallback()}}
+{\footnotesize\ttfamily void cursor\+Pos\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window,  }\item[{double}]{xpos,  }\item[{double}]{ypos }\end{DoxyParamCaption})}
+
+
+
+Callback function for mouse movement. 
+
+Tracks the cursor position and updates the camera\textquotesingle{}s direction based on mouse movement. Handles first-\/mouse initialization to prevent large jumps on the first frame.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that triggered the callback. \\
+\hline
+{\em xpos} & Current X position of the cursor. \\
+\hline
+{\em ypos} & Current Y position of the cursor. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{callbacks_8cpp_ae49f0c4c2064be8fbcf555f46460b7df_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{callbacks_8cpp_a09882d71c70e402a1d6179c914a001c2}\label{callbacks_8cpp_a09882d71c70e402a1d6179c914a001c2} 
+\index{callbacks.cpp@{callbacks.cpp}!framebufferSizeCallback@{framebufferSizeCallback}}
+\index{framebufferSizeCallback@{framebufferSizeCallback}!callbacks.cpp@{callbacks.cpp}}
+\doxysubsubsection{\texorpdfstring{framebufferSizeCallback()}{framebufferSizeCallback()}}
+{\footnotesize\ttfamily void framebuffer\+Size\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Callback function for framebuffer size changes. 
+
+Updates the Open\+GL viewport to match the new window dimensions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that triggered the callback. \\
+\hline
+{\em width} & New width of the framebuffer. \\
+\hline
+{\em height} & New height of the framebuffer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{callbacks_8cpp_aa9b224479e8c1cc5251b8e7f3fdabacd}\label{callbacks_8cpp_aa9b224479e8c1cc5251b8e7f3fdabacd} 
+\index{callbacks.cpp@{callbacks.cpp}!scrollCallback@{scrollCallback}}
+\index{scrollCallback@{scrollCallback}!callbacks.cpp@{callbacks.cpp}}
+\doxysubsubsection{\texorpdfstring{scrollCallback()}{scrollCallback()}}
+{\footnotesize\ttfamily void scroll\+Callback (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window,  }\item[{double}]{xoffset,  }\item[{double}]{yoffset }\end{DoxyParamCaption})}
+
+
+
+Callback function for scroll input. 
+
+Updates the camera\textquotesingle{}s zoom level based on vertical scroll offset.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFW window that triggered the callback. \\
+\hline
+{\em xoffset} & Horizontal scroll offset (unused). \\
+\hline
+{\em yoffset} & Vertical scroll offset. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{callbacks_8cpp_aa9b224479e8c1cc5251b8e7f3fdabacd_cgraph}
+\end{center}
+\end{figure}

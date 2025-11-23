@@ -1,0 +1,91 @@
+\doxysection{Object.\+hpp}
+\hypertarget{Object_8hpp_source}{}\label{Object_8hpp_source}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/core/Object.hpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/core/Object.hpp}}
+\mbox{\hyperlink{Object_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SCOP\_OBJECT\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SCOP\_OBJECT\_HPP}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}../textures/Material.hpp"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}../textures/Texture2D.hpp"{}}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ "{}../utils/utils.hpp"{}}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ "{}../graphics/VertexArray.hpp"{}}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ "{}../graphics/VertexBuffer.hpp"{}}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}../graphics/IndexBuffer.hpp"{}}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ MOVE\_SPEED\ 2.0}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertex}{Vertex}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ std::array<float,\ 3>\ position;}
+\DoxyCodeLine{00037\ \ \ \ \ std::array<float,\ 2>\ uv;}
+\DoxyCodeLine{00038\ \ \ \ \ std::array<float,\ 3>\ normal;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classObject}{Object}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ std::unique\_ptr<Object>\ \mbox{\hyperlink{classObject_a46d2c2f39d35afcce13f6314ba9887b0}{create}}(\textcolor{keyword}{const}\ std::string\ \&objFilePath);}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{classObject}{Object}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classObject}{Object}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classObject}{Object}}(\mbox{\hyperlink{classObject}{Object}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classObject}{\string~Object}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classObject}{Object}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classObject}{Object}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classObject}{Object}}\ \&operator=(\mbox{\hyperlink{classObject}{Object}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_a5cd74912f7047f3e1a6c40731bf3094f}{bind}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_ab71ab1b42aa43091262c3b4a1f61d0b5}{unbind}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_ac12ede689a57de5c31579e2bbee96823}{updateRotationMatrixY}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ angle);}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_a6ad6e1e21f47e841563953114e4c3c00}{moveXaxis}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ direction,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ deltaTime);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_a6120f3644e0467599bd6fbdf30608295}{moveYaxis}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ direction,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ deltaTime);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classObject_a30f7035482729f0214fdc8e1e4eca14f}{moveZaxis}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ direction,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ deltaTime);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ \&getVAO()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00066\ \ \ \ \ std::array<float,\ 3>\ getCenter()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ std::vector<unsigned\ int>\ getIndices()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \ \ std::array<float,\ 16>\ \mbox{\hyperlink{classObject_acdff32ec34c51bf0307d32b9b318883b}{getMatrix}}();}
+\DoxyCodeLine{00069\ \ \ \ \ std::string\ getTexture2DPath()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{const}\ std::array<float,\ 3>\ getPosition()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{const}\ std::unique\_ptr<Material>\ \&getMaterial();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ setTexture2D(\textcolor{keyword}{const}\ std::shared\_ptr<Texture2D>\ \&texture);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ std::vector<Vertex>\ m\_vertices;}
+\DoxyCodeLine{00077\ \ \ \ \ std::vector<unsigned\ int>\ m\_indices;}
+\DoxyCodeLine{00078\ \ \ \ \ std::array<float,\ 3>\ m\_center;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ std::array<float,\ 16>\ m\_translationMatrix;}
+\DoxyCodeLine{00081\ \ \ \ \ std::array<float,\ 16>\ m\_rotationMatrix;}
+\DoxyCodeLine{00082\ \ \ \ \ std::array<float,\ 16>\ m\_matrix;}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ std::shared\_ptr<Texture2D>\ m\_texture2D;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_scaleFactor;}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classVertexArray}{VertexArray}}\ m\_VAO;}
+\DoxyCodeLine{00089\ \ \ \ \ std::unique\_ptr<VertexBuffer>\ m\_VBO\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00090\ \ \ \ \ std::unique\_ptr<IndexBuffer>\ m\_IBO\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ std::unique\_ptr<Material>\ m\_material\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{int}\ parseFile(\textcolor{keyword}{const}\ std::string\ \&filePath);}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ initBuffers();}
+\DoxyCodeLine{00096\ \ \ \ \ std::array<float,\ 3>\ calculateCenter()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{float}\ calculateScale()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ calculateUV\_XY();}
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ calculateUV\_ZY();}
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ computeNormals();}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SCOP\_OBJECT\_HPP}}
+
+\end{DoxyCode}

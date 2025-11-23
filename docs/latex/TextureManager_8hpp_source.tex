@@ -1,0 +1,42 @@
+\doxysection{Texture\+Manager.\+hpp}
+\hypertarget{TextureManager_8hpp_source}{}\label{TextureManager_8hpp_source}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/textures/TextureManager.hpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/textures/TextureManager.hpp}}
+\mbox{\hyperlink{TextureManager_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SCOP\_TEXTUREMANAGER\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SCOP\_TEXTUREMANAGER\_HPP}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <unordered\_map>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Texture2D_8hpp}{Texture2D.hpp}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTextureManager}{TextureManager}}\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classTextureManager_ad76abb178b37cedf4514eb0154349935}{TextureManager}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classTextureManager_ad76abb178b37cedf4514eb0154349935}{TextureManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTextureManager}{TextureManager}}\ \&other);}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classTextureManager_ad76abb178b37cedf4514eb0154349935}{TextureManager}}(\mbox{\hyperlink{classTextureManager}{TextureManager}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classTextureManager}{\string~TextureManager}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classTextureManager}{TextureManager}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classTextureManager}{TextureManager}}\ \&other);}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classTextureManager}{TextureManager}}\ \&operator=(\mbox{\hyperlink{classTextureManager}{TextureManager}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ std::shared\_ptr<Texture2D>\ \mbox{\hyperlink{classTextureManager_aff38041e48245d2c388b5ad2d21cd7c1}{loadTexture2D}}(\textcolor{keyword}{const}\ std::string\ \&path,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ wrapS\ =\ GL\_MIRRORED\_REPEAT,}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ wrapT\ =\ GL\_MIRRORED\_REPEAT,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ minFilter\ =\ GL\_LINEAR\_MIPMAP\_LINEAR,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ magFilter\ =\ GL\_LINEAR);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTextureManager_a5fe7a6bae0afbcde2d5d34ed3fe08612}{bindTexture}}(\textcolor{keyword}{const}\ std::string\ \&path);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classTextureManager_a3b7f3b4a2f72030d45dda4f20923dafd}{getSlot}}(\textcolor{keyword}{const}\ std::string\ \&path);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ std::unordered\_map<std::string,\ std::shared\_ptr<Texture2D>>\ m\_textures2D;}
+\DoxyCodeLine{00047\ \ \ \ \ std::unordered\_map<std::string,\ unsigned\ int>\ m\_slots;}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_nextSlot\ =\ 0;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_maxSlots;}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SCOP\_TEXTUREMANAGER\_HPP}}
+
+\end{DoxyCode}

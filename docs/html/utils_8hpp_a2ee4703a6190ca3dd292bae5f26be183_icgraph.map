@@ -1,0 +1,5 @@
+<map id="addVec" name="addVec">
+<area shape="rect" id="Node000001" title="Adds two 3D vectors." alt="" coords="253,5,323,31"/>
+<area shape="rect" id="Node000002" href="$classCamera.html#af47982264773106d338c38ec9663860d" title="Moves the camera in the specified direction." alt="" coords="5,5,205,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="240,21,206,21,206,15,240,15"/>
+</map>

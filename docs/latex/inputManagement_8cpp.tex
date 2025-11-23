@@ -1,0 +1,73 @@
+\doxysection{/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/utils/input\+Management.cpp File Reference}
+\hypertarget{inputManagement_8cpp}{}\label{inputManagement_8cpp}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/inputManagement.cpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/inputManagement.cpp}}
+
+
+File contains functions related with user input.  
+
+
+{\ttfamily \#include $<$GL/glew.\+h$>$}\newline
+{\ttfamily \#include $<$GLFW/glfw3.\+h$>$}\newline
+{\ttfamily \#include "{}../core/\+Camera.\+hpp"{}}\newline
+{\ttfamily \#include "{}../core/\+Object.\+hpp"{}}\newline
+{\ttfamily \#include "{}../render/\+Renderer.\+hpp"{}}\newline
+Include dependency graph for input\+Management.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inputManagement_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{inputManagement_8cpp_a72f78f14634bffd9fae703bbdfec1a14}{process\+Input}} (GLFWwindow \texorpdfstring{$\ast$}{*}window, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \&object, \mbox{\hyperlink{classRenderer}{Renderer}} \&renderer, double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Processes all input for the current frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{inputManagement_8cpp_a1dfc8527218f1e47af8c1dc10e2a1ae4}\label{inputManagement_8cpp_a1dfc8527218f1e47af8c1dc10e2a1ae4} 
+\mbox{\hyperlink{classCamera}{Camera}} {\bfseries g\+Camera}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File contains functions related with user input. 
+
+\begin{DoxyAuthor}{Author}
+Patryk 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/11-\/2025
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{inputManagement_8cpp_a72f78f14634bffd9fae703bbdfec1a14}\label{inputManagement_8cpp_a72f78f14634bffd9fae703bbdfec1a14} 
+\index{inputManagement.cpp@{inputManagement.cpp}!processInput@{processInput}}
+\index{processInput@{processInput}!inputManagement.cpp@{inputManagement.cpp}}
+\doxysubsubsection{\texorpdfstring{processInput()}{processInput()}}
+{\footnotesize\ttfamily void process\+Input (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \&}]{object,  }\item[{\mbox{\hyperlink{classRenderer}{Renderer}} \&}]{renderer,  }\item[{double}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Processes all input for the current frame. 
+
+Handles closing the window, changing rendering modes, moving the object, and moving the camera based on key presses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Pointer to the GLFW window. \\
+\hline
+{\em object} & Reference to the object being controlled. \\
+\hline
+{\em renderer} & Reference to the renderer. \\
+\hline
+{\em delta\+Time} & Time elapsed since the last frame (used for frame-\/rate-\/independent movement). \\
+\hline
+\end{DoxyParams}

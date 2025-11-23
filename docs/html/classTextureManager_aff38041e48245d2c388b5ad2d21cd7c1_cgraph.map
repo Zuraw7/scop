@@ -1,0 +1,5 @@
+<map id="TextureManager::loadTexture2D" name="TextureManager::loadTexture2D">
+<area shape="rect" id="Node000001" title="Loads a 2D texture or returns an existing one if already loaded." alt="" coords="5,5,235,31"/>
+<area shape="rect" id="Node000002" href="$classTexture2D.html#a53873d77797966d77a5caa1eaa1f448a" title="Loads an image from a file and creates a 2D OpenGL texture." alt="" coords="283,5,420,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="235,15,269,15,269,21,235,21"/>
+</map>

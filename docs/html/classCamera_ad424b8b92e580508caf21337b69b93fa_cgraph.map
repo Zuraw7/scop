@@ -1,0 +1,7 @@
+<map id="Camera::updateCameraVectors" name="Camera::updateCameraVectors">
+<area shape="rect" id="Node000001" title="Recalculates the camera&#39;s directional vectors." alt="" coords="5,31,231,56"/>
+<area shape="rect" id="Node000002" href="$vectorOperations_8cpp.html#a2b4011ef615602166da022d080bfe141" title="Computes the cross product of two 3D vectors." alt="" coords="280,5,388,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,28,266,23,267,29,227,33"/>
+<area shape="rect" id="Node000003" href="$vectorOperations_8cpp.html#a242aa56681b3b3c2c382ecb71aa277df" title="Normalizes a 3D vector." alt="" coords="279,55,389,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,53,265,57,265,62,231,59"/>
+</map>

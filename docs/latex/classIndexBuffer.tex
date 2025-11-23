@@ -1,0 +1,86 @@
+\doxysection{Index\+Buffer Class Reference}
+\hypertarget{classIndexBuffer}{}\label{classIndexBuffer}\index{IndexBuffer@{IndexBuffer}}
+
+
+Wraps an Open\+GL \doxylink{classIndexBuffer}{Index\+Buffer} (element array buffer).  
+
+
+
+
+{\ttfamily \#include $<$Index\+Buffer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIndexBuffer_a95e48fab403f1a6a454513ce53c68541}{Index\+Buffer}} (const unsigned int \texorpdfstring{$\ast$}{*}indices, const size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Creates an \doxylink{classIndexBuffer}{Index\+Buffer} from a raw array of indices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIndexBuffer_a10e80783efa679d42f42091d98f98570}{Index\+Buffer}} (const std\+::vector$<$ unsigned int $>$ \&indices)
+\begin{DoxyCompactList}\small\item\em Creates an \doxylink{classIndexBuffer}{Index\+Buffer} from a std\+::vector of indices. \end{DoxyCompactList}\item 
+\Hypertarget{classIndexBuffer_a3e0d508baf0b053cd9944400fa000013}\label{classIndexBuffer_a3e0d508baf0b053cd9944400fa000013} 
+{\bfseries Index\+Buffer} (const \mbox{\hyperlink{classIndexBuffer}{Index\+Buffer}} \&)=delete
+\item 
+\Hypertarget{classIndexBuffer_acff8f517a40a64aab4a9bfbd366b5b26}\label{classIndexBuffer_acff8f517a40a64aab4a9bfbd366b5b26} 
+{\bfseries Index\+Buffer} (\mbox{\hyperlink{classIndexBuffer}{Index\+Buffer}} \&\&other) noexcept
+\item 
+\Hypertarget{classIndexBuffer_a052250d9f37e76d4335d2979bef46cd7}\label{classIndexBuffer_a052250d9f37e76d4335d2979bef46cd7} 
+\mbox{\hyperlink{classIndexBuffer}{Index\+Buffer}} \& {\bfseries operator=} (const \mbox{\hyperlink{classIndexBuffer}{Index\+Buffer}} \&)=delete
+\item 
+\Hypertarget{classIndexBuffer_a12e339eea126b7f2afa92b15592dde07}\label{classIndexBuffer_a12e339eea126b7f2afa92b15592dde07} 
+\mbox{\hyperlink{classIndexBuffer}{Index\+Buffer}} \& {\bfseries operator=} (\mbox{\hyperlink{classIndexBuffer}{Index\+Buffer}} \&\&other) noexcept
+\item 
+\Hypertarget{classIndexBuffer_ae9d8b583fd99e86874cc8c46f2ed1c17}\label{classIndexBuffer_ae9d8b583fd99e86874cc8c46f2ed1c17} 
+void {\bfseries bind} () const
+\begin{DoxyCompactList}\small\item\em Binds \doxylink{classIndexBuffer}{Index\+Buffer} to the current Open\+GL context. \end{DoxyCompactList}\item 
+\Hypertarget{classIndexBuffer_a29815a01631f16261b0c7e1b9a6959ea}\label{classIndexBuffer_a29815a01631f16261b0c7e1b9a6959ea} 
+void {\bfseries unbind} () const
+\begin{DoxyCompactList}\small\item\em Unbinds \doxylink{classIndexBuffer}{Index\+Buffer} from the current Open\+GL context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps an Open\+GL \doxylink{classIndexBuffer}{Index\+Buffer} (element array buffer). 
+
+The \doxylink{classIndexBuffer}{Index\+Buffer} class is responsible for creating, binding, and unbinding an element array buffer in GPU memory, storing the indices used for indexed rendering. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classIndexBuffer_a95e48fab403f1a6a454513ce53c68541}\label{classIndexBuffer_a95e48fab403f1a6a454513ce53c68541} 
+\index{IndexBuffer@{IndexBuffer}!IndexBuffer@{IndexBuffer}}
+\index{IndexBuffer@{IndexBuffer}!IndexBuffer@{IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{IndexBuffer()}{IndexBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Index\+Buffer\+::\+Index\+Buffer (\begin{DoxyParamCaption}\item[{const unsigned int \texorpdfstring{$\ast$}{*}}]{indices,  }\item[{const size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates an \doxylink{classIndexBuffer}{Index\+Buffer} from a raw array of indices. 
+
+This constructor generates an Open\+GL element array buffer (EBO), binds it, and fills it with the provided indices.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & List of object\textquotesingle{}s indexes \\
+\hline
+{\em size} & Index count \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classIndexBuffer_a10e80783efa679d42f42091d98f98570}\label{classIndexBuffer_a10e80783efa679d42f42091d98f98570} 
+\index{IndexBuffer@{IndexBuffer}!IndexBuffer@{IndexBuffer}}
+\index{IndexBuffer@{IndexBuffer}!IndexBuffer@{IndexBuffer}}
+\doxysubsubsection{\texorpdfstring{IndexBuffer()}{IndexBuffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Index\+Buffer\+::\+Index\+Buffer (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ unsigned int $>$ \&}]{indices }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Creates an \doxylink{classIndexBuffer}{Index\+Buffer} from a std\+::vector of indices. 
+
+This constructor generates an Open\+GL element array buffer (EBO), binds it, and fills it with the indices contained in the vector.
+
+
+\begin{DoxyParams}{Parameters}
+{\em indices} & Vector of unsigned integers representing the object\textquotesingle{}s indices. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/graphics/\mbox{\hyperlink{IndexBuffer_8hpp}{Index\+Buffer.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/graphics/\mbox{\hyperlink{IndexBuffer_8cpp}{Index\+Buffer.\+cpp}}\end{DoxyCompactItemize}

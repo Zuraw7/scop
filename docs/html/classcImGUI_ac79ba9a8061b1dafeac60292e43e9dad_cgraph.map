@@ -1,0 +1,7 @@
+<map id="cImGUI::displayHUD" name="cImGUI::displayHUD">
+<area shape="rect" id="Node000001" title="Displays HUD with useful information." alt="" coords="5,31,160,56"/>
+<area shape="rect" id="Node000002" href="$classcImGUI.html#a451a65c96b21957ea861d009f1dc633b" title="Displays the current FPS in a small window." alt="" coords="209,5,359,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,31,195,26,196,32,161,36"/>
+<area shape="rect" id="Node000003" href="$classcImGUI.html#ad96d881b3c6b68212f3ebbad1cd8b063" title="Displays a custom text window." alt="" coords="208,55,360,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,50,195,54,194,59,160,55"/>
+</map>

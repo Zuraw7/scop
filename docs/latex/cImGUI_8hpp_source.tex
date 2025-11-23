@@ -1,0 +1,46 @@
+\doxysection{c\+Im\+GUI.\+hpp}
+\hypertarget{cImGUI_8hpp_source}{}\label{cImGUI_8hpp_source}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/3rd/cImGUI.hpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/3rd/cImGUI.hpp}}
+\mbox{\hyperlink{cImGUI_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SCOP\_IMGUI\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SCOP\_IMGUI\_HPP}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <GL/glew.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}../../lib/imgui/imgui.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}../../lib/imgui/imgui\_impl\_glfw.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}../../lib/imgui/imgui\_impl\_opengl3.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}../core/Camera.hpp"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}../core/Object.hpp"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{extern}\ \mbox{\hyperlink{classCamera}{Camera}}\ gCamera;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classcImGUI}{cImGUI}}\ \{}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classcImGUI_ad905ed8b6f582aa2ac00dbeff674c55e}{cImGUI}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcImGUI_abf54357765274b32036af2e43fc1566f}{init}}(GLFWwindow*\ window);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcImGUI_ae01abfac78633dcd27e1de2b75a7eb2b}{createNewFrame}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcImGUI_a451a65c96b21957ea861d009f1dc633b}{displayFPS}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcImGUI_ad96d881b3c6b68212f3ebbad1cd8b063}{displayText}}(\textcolor{keyword}{const}\ std::string\ \&name,\ \textcolor{keywordtype}{int}\ posx,\ \textcolor{keywordtype}{int}\ posy,\ \textcolor{keyword}{const}\ std::string\ \&text);}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcImGUI_ac79ba9a8061b1dafeac60292e43e9dad}{displayHUD}}(\textcolor{keyword}{const}\ std::unique\_ptr<Object>\ \&\textcolor{keywordtype}{object});}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcImGUI_aeb8e6964603034f9975fcf58d67dedef}{render}}();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classcImGUI_a8d2e6f0533ffc3b64434e49ab6b874a9}{cleanup}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_mainScale;}
+\DoxyCodeLine{00047\ \ \ \ \ ImGuiWindowFlags\ m\_windowFlags;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ createContext();}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ scale();}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ setStyle();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ implementBackendGLFWOpenGL(GLFWwindow*\ window);}
+\DoxyCodeLine{00053\ \};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SCOP\_IMGUI\_HPP}}
+
+\end{DoxyCode}

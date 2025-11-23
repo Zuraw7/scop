@@ -1,0 +1,86 @@
+\doxysection{Renderer Class Reference}
+\hypertarget{classRenderer}{}\label{classRenderer}\index{Renderer@{Renderer}}
+
+
+\doxylink{classRenderer}{Renderer} wraps all rendering calls into dedicated functions. It also controlls how objects are being rendered.  
+
+
+
+
+{\ttfamily \#include $<$Renderer.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRenderer_a7c57c32f7bb804f0f630816c0c18e5f8}{set\+Background\+Color}} (const float red, const float green, const float blue, const float alpha)
+\begin{DoxyCompactList}\small\item\em Creates background color from given RGBA value. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_ab084c79787c3e2857ddc89a55d9955cf}\label{classRenderer_ab084c79787c3e2857ddc89a55d9955cf} 
+void {\bfseries clear} () const
+\begin{DoxyCompactList}\small\item\em Clear last scene buffers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRenderer_ad241472b14043f44d04117a29d2500de}{draw}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \&object, \mbox{\hyperlink{classShader}{Shader}} \&shader, float delta\+Time) const
+\begin{DoxyCompactList}\small\item\em Draws given object using given shader. Binds all necessary object\textquotesingle{}s information required by shader. \end{DoxyCompactList}\item 
+\Hypertarget{classRenderer_ab85ae2cb37d9938adb1b3a76f31e356a}\label{classRenderer_ab85ae2cb37d9938adb1b3a76f31e356a} 
+void {\bfseries switch\+Polygon\+Mode} ()
+\item 
+\Hypertarget{classRenderer_ad6556369dbf9f8c98ec05cf05313e47e}\label{classRenderer_ad6556369dbf9f8c98ec05cf05313e47e} 
+void {\bfseries toggle\+Color\+Mode} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classRenderer}{Renderer} wraps all rendering calls into dedicated functions. It also controlls how objects are being rendered. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRenderer_ad241472b14043f44d04117a29d2500de}\label{classRenderer_ad241472b14043f44d04117a29d2500de} 
+\index{Renderer@{Renderer}!draw@{draw}}
+\index{draw@{draw}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Renderer\+::draw (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \&}]{object,  }\item[{\mbox{\hyperlink{classShader}{Shader}} \&}]{shader,  }\item[{float}]{delta\+Time }\end{DoxyParamCaption}) const}
+
+
+
+Draws given object using given shader. Binds all necessary object\textquotesingle{}s information required by shader. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & An actual object to draw \\
+\hline
+{\em shader} & Program that tells how to draw given object \\
+\hline
+{\em delta\+Time} & Used to create smooth transition when switching mode from colored to texture \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRenderer_ad241472b14043f44d04117a29d2500de_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRenderer_a7c57c32f7bb804f0f630816c0c18e5f8}\label{classRenderer_a7c57c32f7bb804f0f630816c0c18e5f8} 
+\index{Renderer@{Renderer}!setBackgroundColor@{setBackgroundColor}}
+\index{setBackgroundColor@{setBackgroundColor}!Renderer@{Renderer}}
+\doxysubsubsection{\texorpdfstring{setBackgroundColor()}{setBackgroundColor()}}
+{\footnotesize\ttfamily void Renderer\+::set\+Background\+Color (\begin{DoxyParamCaption}\item[{const float}]{red,  }\item[{const float}]{green,  }\item[{const float}]{blue,  }\item[{const float}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Creates background color from given RGBA value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em red} & \\
+\hline
+{\em green} & \\
+\hline
+{\em blue} & \\
+\hline
+{\em alpha} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/render/\mbox{\hyperlink{Renderer_8hpp}{Renderer.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/render/\mbox{\hyperlink{Renderer_8cpp}{Renderer.\+cpp}}\end{DoxyCompactItemize}

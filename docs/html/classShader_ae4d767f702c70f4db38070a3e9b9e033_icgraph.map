@@ -1,0 +1,7 @@
+<map id="Shader::setFloat" name="Shader::setFloat">
+<area shape="rect" id="Node000001" title="Sets a float uniform in the shader program." alt="" coords="175,31,303,56"/>
+<area shape="rect" id="Node000002" href="$classMaterial.html#a8a0364a72009f7a6d83016008534e3ab" title="Sends material parameters to the shader." alt="" coords="6,5,126,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="161,35,126,29,127,24,161,29"/>
+<area shape="rect" id="Node000003" href="$classRenderer.html#ad241472b14043f44d04117a29d2500de" title="Draws given object using given shader. Binds all necessary object&#39;s information required by shader." alt="" coords="5,55,127,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,57,127,62,127,56,161,51"/>
+</map>

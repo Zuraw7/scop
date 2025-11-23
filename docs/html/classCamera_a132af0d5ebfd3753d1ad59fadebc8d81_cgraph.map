@@ -1,0 +1,5 @@
+<map id="Camera::updateCameraZoom" name="Camera::updateCameraZoom">
+<area shape="rect" id="Node000001" title="Adjusts the camera&#39;s zoom (field of view)." alt="" coords="5,5,220,31"/>
+<area shape="rect" id="Node000002" href="$matrixOperations_8cpp.html#ac180e611998d6d9c55efa0cd55033f94" title="Creates a perspective projection matrix." alt="" coords="268,5,387,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,15,254,15,254,21,221,21"/>
+</map>

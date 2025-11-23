@@ -1,0 +1,245 @@
+\doxysection{/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/utils/matrix\+Operations.cpp File Reference}
+\hypertarget{matrixOperations_8cpp}{}\label{matrixOperations_8cpp}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/matrixOperations.cpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/matrixOperations.cpp}}
+
+
+File contains matrix functions.  
+
+
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}utils.\+hpp"{}}\newline
+Include dependency graph for matrix\+Operations.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrixOperations_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ float, 16 $>$ \mbox{\hyperlink{matrixOperations_8cpp_ac180e611998d6d9c55efa0cd55033f94}{get\+Perspective}} (const float fov, const float aspect\+Ratio, const float near, const float far)
+\begin{DoxyCompactList}\small\item\em Creates a perspective projection matrix. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 16 $>$ \mbox{\hyperlink{matrixOperations_8cpp_ae174908cce46421f38469803bfa59f5a}{translate\+Matrix}} (const std\+::array$<$ float, 16 $>$ \&mat, const float x, const float y, const float z)
+\begin{DoxyCompactList}\small\item\em Translates a 4x4 transformation matrix. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 16 $>$ \mbox{\hyperlink{matrixOperations_8cpp_a76d118ab7f488b1894ea56752c30fad2}{multiply\+Matrix}} (const std\+::array$<$ float, 16 $>$ \&mat1, const std\+::array$<$ float, 16 $>$ \&mat2)
+\begin{DoxyCompactList}\small\item\em Multiplies two 4x4 matrices. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 16 $>$ \mbox{\hyperlink{matrixOperations_8cpp_a1e1e8660fcecd7c15f917a2a41102d2b}{scale\+Matrix}} (const std\+::array$<$ float, 16 $>$ \&matrix, const float scale\+Factor)
+\begin{DoxyCompactList}\small\item\em Scales a 4x4 matrix uniformly. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 16 $>$ \mbox{\hyperlink{matrixOperations_8cpp_af7b80c3132eeb77e03594e884ad2aa92}{get\+Rotation\+MatrixY}} (const float angle)
+\begin{DoxyCompactList}\small\item\em Creates a rotation matrix for rotation around the Y-\/axis. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 16 $>$ \mbox{\hyperlink{matrixOperations_8cpp_a1e1bbdd420829f16ffff997480c3cc30}{get\+Identity\+Mat4}} ()
+\begin{DoxyCompactList}\small\item\em Returns a 4x4 identity matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrixOperations_8cpp_a89e39c082651b80483f72e5f8319df47}{print\+Matrix}} (const std\+::array$<$ float, 16 $>$ \&mat, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Prints a 4x4 matrix to the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File contains matrix functions. 
+
+\begin{DoxyAuthor}{Author}
+Patryk 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/11-\/2025
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{matrixOperations_8cpp_a1e1bbdd420829f16ffff997480c3cc30}\label{matrixOperations_8cpp_a1e1bbdd420829f16ffff997480c3cc30} 
+\index{matrixOperations.cpp@{matrixOperations.cpp}!getIdentityMat4@{getIdentityMat4}}
+\index{getIdentityMat4@{getIdentityMat4}!matrixOperations.cpp@{matrixOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{getIdentityMat4()}{getIdentityMat4()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 16 $>$ get\+Identity\+Mat4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a 4x4 identity matrix. 
+
+The identity matrix has 1s on the diagonal and 0s elsewhere. It represents a “no transformation” state.
+
+\begin{DoxyReturn}{Returns}
+std\+::array$<$float, 16$>$ Identity matrix. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrixOperations_8cpp_a1e1bbdd420829f16ffff997480c3cc30_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{matrixOperations_8cpp_ac180e611998d6d9c55efa0cd55033f94}\label{matrixOperations_8cpp_ac180e611998d6d9c55efa0cd55033f94} 
+\index{matrixOperations.cpp@{matrixOperations.cpp}!getPerspective@{getPerspective}}
+\index{getPerspective@{getPerspective}!matrixOperations.cpp@{matrixOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{getPerspective()}{getPerspective()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 16 $>$ get\+Perspective (\begin{DoxyParamCaption}\item[{const float}]{fov,  }\item[{const float}]{aspect\+Ratio,  }\item[{const float}]{near,  }\item[{const float}]{far }\end{DoxyParamCaption})}
+
+
+
+Creates a perspective projection matrix. 
+
+Generates a projection matrix using the specified field of view, aspect ratio, and near/far clipping planes. Used to simulate depth in 3D rendering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fov} & Field of view in degrees. \\
+\hline
+{\em aspect\+Ratio} & Ratio of the viewport width to height. \\
+\hline
+{\em near} & Distance to the near clipping plane. \\
+\hline
+{\em far} & Distance to the far clipping plane. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::array$<$float, 16$>$ 4x4 perspective projection matrix. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrixOperations_8cpp_ac180e611998d6d9c55efa0cd55033f94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{matrixOperations_8cpp_af7b80c3132eeb77e03594e884ad2aa92}\label{matrixOperations_8cpp_af7b80c3132eeb77e03594e884ad2aa92} 
+\index{matrixOperations.cpp@{matrixOperations.cpp}!getRotationMatrixY@{getRotationMatrixY}}
+\index{getRotationMatrixY@{getRotationMatrixY}!matrixOperations.cpp@{matrixOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{getRotationMatrixY()}{getRotationMatrixY()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 16 $>$ get\+Rotation\+MatrixY (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
+
+
+
+Creates a rotation matrix for rotation around the Y-\/axis. 
+
+Returns a 4x4 rotation matrix that rotates points around the Y-\/axis by the specified angle.
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Rotation angle in radians. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::array$<$float, 16$>$ Y-\/axis rotation matrix. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrixOperations_8cpp_af7b80c3132eeb77e03594e884ad2aa92_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{matrixOperations_8cpp_a76d118ab7f488b1894ea56752c30fad2}\label{matrixOperations_8cpp_a76d118ab7f488b1894ea56752c30fad2} 
+\index{matrixOperations.cpp@{matrixOperations.cpp}!multiplyMatrix@{multiplyMatrix}}
+\index{multiplyMatrix@{multiplyMatrix}!matrixOperations.cpp@{matrixOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{multiplyMatrix()}{multiplyMatrix()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 16 $>$ multiply\+Matrix (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 16 $>$ \&}]{mat1,  }\item[{const std\+::array$<$ float, 16 $>$ \&}]{mat2 }\end{DoxyParamCaption})}
+
+
+
+Multiplies two 4x4 matrices. 
+
+Performs standard matrix multiplication of two 4x4 matrices (mat1 \texorpdfstring{$\ast$}{*} mat2).
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat1} & The first matrix (left operand). \\
+\hline
+{\em mat2} & The second matrix (right operand). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::array$<$float, 16$>$ The resulting matrix. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrixOperations_8cpp_a76d118ab7f488b1894ea56752c30fad2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{matrixOperations_8cpp_a89e39c082651b80483f72e5f8319df47}\label{matrixOperations_8cpp_a89e39c082651b80483f72e5f8319df47} 
+\index{matrixOperations.cpp@{matrixOperations.cpp}!printMatrix@{printMatrix}}
+\index{printMatrix@{printMatrix}!matrixOperations.cpp@{matrixOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{printMatrix()}{printMatrix()}}
+{\footnotesize\ttfamily void print\+Matrix (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 16 $>$ \&}]{mat,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Prints a 4x4 matrix to the console. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & The matrix to print. \\
+\hline
+{\em name} & Optional name to display before the matrix. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{matrixOperations_8cpp_a1e1e8660fcecd7c15f917a2a41102d2b}\label{matrixOperations_8cpp_a1e1e8660fcecd7c15f917a2a41102d2b} 
+\index{matrixOperations.cpp@{matrixOperations.cpp}!scaleMatrix@{scaleMatrix}}
+\index{scaleMatrix@{scaleMatrix}!matrixOperations.cpp@{matrixOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{scaleMatrix()}{scaleMatrix()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 16 $>$ scale\+Matrix (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 16 $>$ \&}]{matrix,  }\item[{const float}]{scale\+Factor }\end{DoxyParamCaption})}
+
+
+
+Scales a 4x4 matrix uniformly. 
+
+Applies a uniform scaling transformation to the matrix using the given scale factor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & Input matrix to scale. \\
+\hline
+{\em scale\+Factor} & Uniform scaling factor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::array$<$float, 16$>$ Scaled matrix. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{matrixOperations_8cpp_a1e1e8660fcecd7c15f917a2a41102d2b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{matrixOperations_8cpp_ae174908cce46421f38469803bfa59f5a}\label{matrixOperations_8cpp_ae174908cce46421f38469803bfa59f5a} 
+\index{matrixOperations.cpp@{matrixOperations.cpp}!translateMatrix@{translateMatrix}}
+\index{translateMatrix@{translateMatrix}!matrixOperations.cpp@{matrixOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{translateMatrix()}{translateMatrix()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 16 $>$ translate\+Matrix (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 16 $>$ \&}]{mat,  }\item[{const float}]{x,  }\item[{const float}]{y,  }\item[{const float}]{z }\end{DoxyParamCaption})}
+
+
+
+Translates a 4x4 transformation matrix. 
+
+Applies a translation (movement) to the given matrix by the specified x, y, and z offsets.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mat} & The input matrix. \\
+\hline
+{\em x} & Translation distance along the X-\/axis. \\
+\hline
+{\em y} & Translation distance along the Y-\/axis. \\
+\hline
+{\em z} & Translation distance along the Z-\/axis. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::array$<$float, 16$>$ The translated matrix. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{matrixOperations_8cpp_ae174908cce46421f38469803bfa59f5a_icgraph}
+\end{center}
+\end{figure}

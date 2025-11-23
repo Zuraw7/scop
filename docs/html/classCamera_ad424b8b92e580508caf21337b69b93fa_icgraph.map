@@ -1,0 +1,7 @@
+<map id="Camera::updateCameraVectors" name="Camera::updateCameraVectors">
+<area shape="rect" id="Node000001" title="Recalculates the camera&#39;s directional vectors." alt="" coords="479,5,704,31"/>
+<area shape="rect" id="Node000002" href="$classCamera.html#a585b215676af11cfc36fa3c3dfd750a2" title="Updates the camera&#39;s orientation based on mouse movement." alt="" coords="195,5,431,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="465,21,431,21,431,15,465,15"/>
+<area shape="rect" id="Node000003" href="$callbacks_8cpp.html#ae49f0c4c2064be8fbcf555f46460b7df" title="Callback function for mouse movement." alt="" coords="5,5,147,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="181,21,147,21,147,15,181,15"/>
+</map>

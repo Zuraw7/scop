@@ -1,0 +1,18 @@
+<map id="/home/zuraw/Desktop/42&#45;advanced&#45;core/scop/src/textures/Texture2D.cpp" name="/home/zuraw/Desktop/42&#45;advanced&#45;core/scop/src/textures/Texture2D.cpp">
+<area shape="rect" id="Node000001" title="Texture2D class implementation." alt="" coords="16,5,216,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,181,91,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,61,61,170,56,167,102,59"/>
+<area shape="rect" id="Node000003" href="$Texture2D_8hpp.html" title="Texture2D class declaration." alt="" coords="126,108,242,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,58,168,95,164,99,135,62"/>
+<area shape="poly" id="edge8_Node000003_Node000002" title=" " alt="" coords="163,136,83,177,81,173,161,131"/>
+<area shape="rect" id="Node000004" href="$stb__image_8h_source.html" title=" " alt="" coords="115,181,253,207"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="187,134,187,168,181,168,181,134"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="277,181,357,207"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="207,131,285,172,282,177,204,136"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="381,181,459,207"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="223,131,369,175,368,180,221,136"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="104,255,171,280"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="179,208,155,245,150,242,174,206"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="195,255,266,280"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="194,206,218,242,213,245,189,208"/>
+</map>

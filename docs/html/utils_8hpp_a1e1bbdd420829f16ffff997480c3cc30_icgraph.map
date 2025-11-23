@@ -1,0 +1,9 @@
+<map id="getIdentityMat4" name="getIdentityMat4">
+<area shape="rect" id="Node000001" title="Returns a 4x4 identity matrix." alt="" coords="276,55,403,80"/>
+<area shape="rect" id="Node000002" href="$classObject.html#a46d2c2f39d35afcce13f6314ba9887b0" title="Creates and initializes an Object from a .obj file." alt="" coords="60,5,173,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,54,227,45,173,33,174,27,229,39,271,49"/>
+<area shape="rect" id="Node000003" href="$classObject.html#acdff32ec34c51bf0307d32b9b318883b" title="Computes and returns the object&#39;s model transformation matrix." alt="" coords="49,55,184,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="262,70,184,70,184,65,262,65"/>
+<area shape="rect" id="Node000004" href="$classObject.html#ac12ede689a57de5c31579e2bbee96823" title="Updates the object&#39;s rotation around its local Y axis." alt="" coords="5,104,228,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="269,86,175,107,174,101,268,80"/>
+</map>

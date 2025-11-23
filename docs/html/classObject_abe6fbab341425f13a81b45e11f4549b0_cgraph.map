@@ -1,0 +1,5 @@
+<map id="Object::Object" name="Object::Object">
+<area shape="rect" id="Node000001" title="Constructs a 3D object from an .obj file." alt="" coords="5,5,120,31"/>
+<area shape="rect" id="Node000002" href="$matrixOperations_8cpp.html#a1e1bbdd420829f16ffff997480c3cc30" title="Returns a 4x4 identity matrix." alt="" coords="168,5,295,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,15,154,15,154,21,120,21"/>
+</map>

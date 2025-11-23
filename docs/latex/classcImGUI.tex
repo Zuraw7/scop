@@ -1,0 +1,178 @@
+\doxysection{c\+Im\+GUI Class Reference}
+\hypertarget{classcImGUI}{}\label{classcImGUI}\index{cImGUI@{cImGUI}}
+
+
+Wrapper for Im\+Gui to simplify GUI creation.  
+
+
+
+
+{\ttfamily \#include $<$c\+Im\+GUI.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcImGUI_ad905ed8b6f582aa2ac00dbeff674c55e}{c\+Im\+GUI}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the \doxylink{classcImGUI}{c\+Im\+GUI} object with default settings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcImGUI_abf54357765274b32036af2e43fc1566f}{init}} (GLFWwindow \texorpdfstring{$\ast$}{*}window)
+\begin{DoxyCompactList}\small\item\em Initializes Im\+Gui for the specified GLFW window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcImGUI_ae01abfac78633dcd27e1de2b75a7eb2b}{create\+New\+Frame}} ()
+\begin{DoxyCompactList}\small\item\em Starts a new Im\+Gui frame. \end{DoxyCompactList}\item 
+\Hypertarget{classcImGUI_a451a65c96b21957ea861d009f1dc633b}\label{classcImGUI_a451a65c96b21957ea861d009f1dc633b} 
+void {\bfseries display\+FPS} ()
+\begin{DoxyCompactList}\small\item\em Displays the current FPS in a small window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcImGUI_ad96d881b3c6b68212f3ebbad1cd8b063}{display\+Text}} (const std\+::string \&name, int posx, int posy, const std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Displays a custom text window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcImGUI_ac79ba9a8061b1dafeac60292e43e9dad}{display\+HUD}} (const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \&object)
+\begin{DoxyCompactList}\small\item\em Displays HUD with useful information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcImGUI_aeb8e6964603034f9975fcf58d67dedef}{render}} ()
+\begin{DoxyCompactList}\small\item\em Renders the Im\+Gui draw data to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcImGUI_a8d2e6f0533ffc3b64434e49ab6b874a9}{cleanup}} ()
+\begin{DoxyCompactList}\small\item\em Cleans up Im\+Gui and its backends. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper for Im\+Gui to simplify GUI creation. 
+
+This class provides an easy interface for initializing Im\+Gui, creating frames, displaying text and FPS, and rendering the GUI. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcImGUI_ad905ed8b6f582aa2ac00dbeff674c55e}\label{classcImGUI_ad905ed8b6f582aa2ac00dbeff674c55e} 
+\index{cImGUI@{cImGUI}!cImGUI@{cImGUI}}
+\index{cImGUI@{cImGUI}!cImGUI@{cImGUI}}
+\doxysubsubsection{\texorpdfstring{cImGUI()}{cImGUI()}}
+{\footnotesize\ttfamily c\+Im\+GUI\+::c\+Im\+GUI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs the \doxylink{classcImGUI}{c\+Im\+GUI} object with default settings. 
+
+Sets initial GUI scale to 0 and initializes default window flags\+:
+\begin{DoxyItemize}
+\item No decoration
+\item Auto-\/resize
+\item No background
+\item No saved settings 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcImGUI_a8d2e6f0533ffc3b64434e49ab6b874a9}\label{classcImGUI_a8d2e6f0533ffc3b64434e49ab6b874a9} 
+\index{cImGUI@{cImGUI}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!cImGUI@{cImGUI}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void c\+Im\+GUI\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cleans up Im\+Gui and its backends. 
+
+Shuts down the Open\+GL3 and GLFW backends and destroys the Im\+Gui context. Should be called before the application exits. \Hypertarget{classcImGUI_ae01abfac78633dcd27e1de2b75a7eb2b}\label{classcImGUI_ae01abfac78633dcd27e1de2b75a7eb2b} 
+\index{cImGUI@{cImGUI}!createNewFrame@{createNewFrame}}
+\index{createNewFrame@{createNewFrame}!cImGUI@{cImGUI}}
+\doxysubsubsection{\texorpdfstring{createNewFrame()}{createNewFrame()}}
+{\footnotesize\ttfamily void c\+Im\+GUI\+::create\+New\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts a new Im\+Gui frame. 
+
+Prepares Im\+Gui for rendering a new frame. Must be called at the beginning of each frame before any Im\+Gui draw calls. \Hypertarget{classcImGUI_ac79ba9a8061b1dafeac60292e43e9dad}\label{classcImGUI_ac79ba9a8061b1dafeac60292e43e9dad} 
+\index{cImGUI@{cImGUI}!displayHUD@{displayHUD}}
+\index{displayHUD@{displayHUD}!cImGUI@{cImGUI}}
+\doxysubsubsection{\texorpdfstring{displayHUD()}{displayHUD()}}
+{\footnotesize\ttfamily void c\+Im\+GUI\+::display\+HUD (\begin{DoxyParamCaption}\item[{const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \&}]{object }\end{DoxyParamCaption})}
+
+
+
+Displays HUD with useful information. 
+
+HUD shows\+:
+\begin{DoxyItemize}
+\item FPS counter
+\item movement instructions for both object and camera
+\item mesh mode control buttons
+\item object\textquotesingle{}s world position
+\item camera\textquotesingle{}s world position
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & Reference to the object whose position will be displayed \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classcImGUI_ac79ba9a8061b1dafeac60292e43e9dad_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcImGUI_ad96d881b3c6b68212f3ebbad1cd8b063}\label{classcImGUI_ad96d881b3c6b68212f3ebbad1cd8b063} 
+\index{cImGUI@{cImGUI}!displayText@{displayText}}
+\index{displayText@{displayText}!cImGUI@{cImGUI}}
+\doxysubsubsection{\texorpdfstring{displayText()}{displayText()}}
+{\footnotesize\ttfamily void c\+Im\+GUI\+::display\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{int}]{posx,  }\item[{int}]{posy,  }\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Displays a custom text window. 
+
+Creates an Im\+Gui window at the specified position and displays the given text.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name (title) of the Im\+Gui window. \\
+\hline
+{\em posx} & X-\/coordinate of the window position. \\
+\hline
+{\em posy} & Y-\/coordinate of the window position. \\
+\hline
+{\em text} & The text content to display inside the window. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classcImGUI_ad96d881b3c6b68212f3ebbad1cd8b063_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcImGUI_abf54357765274b32036af2e43fc1566f}\label{classcImGUI_abf54357765274b32036af2e43fc1566f} 
+\index{cImGUI@{cImGUI}!init@{init}}
+\index{init@{init}!cImGUI@{cImGUI}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void c\+Im\+GUI\+::init (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window }\end{DoxyParamCaption})}
+
+
+
+Initializes Im\+Gui for the specified GLFW window. 
+
+Performs the following steps\+:
+\begin{DoxyEnumerate}
+\item Creates the Im\+Gui context.
+\item Applies DPI scaling.
+\item Sets the GUI style (dark theme by default).
+\item Initializes the GLFW + Open\+GL3 backend for rendering.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & Pointer to the GLFW window to attach Im\+Gui to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcImGUI_aeb8e6964603034f9975fcf58d67dedef}\label{classcImGUI_aeb8e6964603034f9975fcf58d67dedef} 
+\index{cImGUI@{cImGUI}!render@{render}}
+\index{render@{render}!cImGUI@{cImGUI}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void c\+Im\+GUI\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the Im\+Gui draw data to the screen. 
+
+Must be called after all Im\+Gui windows and draw calls have been created in the current frame. Sends the draw data to Open\+GL for rendering. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/3rd/\mbox{\hyperlink{cImGUI_8hpp}{c\+Im\+GUI.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/3rd/\mbox{\hyperlink{cImGUI_8cpp}{c\+Im\+GUI.\+cpp}}\end{DoxyCompactItemize}

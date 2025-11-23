@@ -1,0 +1,79 @@
+\doxysection{/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/graphics/\+Shader.cpp File Reference}
+\hypertarget{Shader_8cpp}{}\label{Shader_8cpp}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/graphics/Shader.cpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/graphics/Shader.cpp}}
+
+
+\doxylink{classShader}{Shader} class implementation.  
+
+
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include "{}Shader.\+hpp"{}}\newline
+Include dependency graph for Shader.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Shader_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{Shader_8cpp_a0365c74861fee56d922b9b6e94c1c984}{parse\+Shader\+File}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Reads the contents of a shader file and returns it as a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Shader_8cpp_ab20d0a22b531947c87fe921cb59e045c}{check\+Shader\+Compilation\+Status}} (unsigned int shader, unsigned int type)
+\begin{DoxyCompactList}\small\item\em Checks the compilation status of a shader and prints errors if any occurs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classShader}{Shader} class implementation. 
+
+\begin{DoxyAuthor}{Author}
+Patryk 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+13-\/11-\/2025
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Shader_8cpp_ab20d0a22b531947c87fe921cb59e045c}\label{Shader_8cpp_ab20d0a22b531947c87fe921cb59e045c} 
+\index{Shader.cpp@{Shader.cpp}!checkShaderCompilationStatus@{checkShaderCompilationStatus}}
+\index{checkShaderCompilationStatus@{checkShaderCompilationStatus}!Shader.cpp@{Shader.cpp}}
+\doxysubsubsection{\texorpdfstring{checkShaderCompilationStatus()}{checkShaderCompilationStatus()}}
+{\footnotesize\ttfamily void check\+Shader\+Compilation\+Status (\begin{DoxyParamCaption}\item[{unsigned int}]{shader,  }\item[{unsigned int}]{type }\end{DoxyParamCaption})}
+
+
+
+Checks the compilation status of a shader and prints errors if any occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em shader} & Open\+GL shader ID. \\
+\hline
+{\em type} & Type of the shader (e.\+g., GL\+\_\+\+VERTEX\+\_\+\+SHADER, GL\+\_\+\+FRAGMENT\+\_\+\+SHADER). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Shader_8cpp_a0365c74861fee56d922b9b6e94c1c984}\label{Shader_8cpp_a0365c74861fee56d922b9b6e94c1c984} 
+\index{Shader.cpp@{Shader.cpp}!parseShaderFile@{parseShaderFile}}
+\index{parseShaderFile@{parseShaderFile}!Shader.cpp@{Shader.cpp}}
+\doxysubsubsection{\texorpdfstring{parseShaderFile()}{parseShaderFile()}}
+{\footnotesize\ttfamily std\+::string parse\+Shader\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Reads the contents of a shader file and returns it as a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the shader file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string Contents of the shader file, or an empty string if the file could not be opened. 
+\end{DoxyReturn}

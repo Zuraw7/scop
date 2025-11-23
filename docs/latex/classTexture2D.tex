@@ -1,0 +1,112 @@
+\doxysection{Texture2D Class Reference}
+\hypertarget{classTexture2D}{}\label{classTexture2D}\index{Texture2D@{Texture2D}}
+
+
+Wraps a 2D texture in Open\+GL.  
+
+
+
+
+{\ttfamily \#include $<$Texture2\+D.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classTexture2D_a166acf3a5cec54be05cc4d0aaa2fb4ed}\label{classTexture2D_a166acf3a5cec54be05cc4d0aaa2fb4ed} 
+{\bfseries Texture2D} (const \mbox{\hyperlink{classTexture2D}{Texture2D}} \&other)=delete
+\item 
+\Hypertarget{classTexture2D_a13b44cbc76977555b120116cd0bd9752}\label{classTexture2D_a13b44cbc76977555b120116cd0bd9752} 
+{\bfseries Texture2D} (\mbox{\hyperlink{classTexture2D}{Texture2D}} \&\&other) noexcept
+\item 
+\Hypertarget{classTexture2D_a5da2bf2a7a96ac1212171b57f8ca313b}\label{classTexture2D_a5da2bf2a7a96ac1212171b57f8ca313b} 
+\mbox{\hyperlink{classTexture2D}{Texture2D}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTexture2D}{Texture2D}} \&other)=delete
+\item 
+\Hypertarget{classTexture2D_a9c4619c0d2c764ae8f402cc2cb7cc7b5}\label{classTexture2D_a9c4619c0d2c764ae8f402cc2cb7cc7b5} 
+\mbox{\hyperlink{classTexture2D}{Texture2D}} \& {\bfseries operator=} (\mbox{\hyperlink{classTexture2D}{Texture2D}} \&\&other) noexcept
+\item 
+void \mbox{\hyperlink{classTexture2D_a8e1f4a12976d1a76547bea69cf4a738c}{bind}} (const unsigned int slot=0) const
+\begin{DoxyCompactList}\small\item\em Binds the texture to a specific texture slot in the GPU. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classTexture2D_a0fece49baa70c5257db2e9ddf88b8fcd}{get\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the file path of the texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTexture2D}{Texture2D}} $>$ \mbox{\hyperlink{classTexture2D_a53873d77797966d77a5caa1eaa1f448a}{create}} (const std\+::string \&path, unsigned int wrapS=GL\+\_\+\+MIRRORED\+\_\+\+REPEAT, unsigned int wrapT=GL\+\_\+\+MIRRORED\+\_\+\+REPEAT, unsigned int min\+Filter=GL\+\_\+\+LINEAR\+\_\+\+MIPMAP\+\_\+\+LINEAR, unsigned int mag\+Filter=GL\+\_\+\+LINEAR)
+\begin{DoxyCompactList}\small\item\em Loads an image from a file and creates a 2D Open\+GL texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps a 2D texture in Open\+GL. 
+
+The \doxylink{classTexture2D}{Texture2D} class loads an image from a file and creates an Open\+GL texture. It supports setting wrapping and filtering options. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTexture2D_a8e1f4a12976d1a76547bea69cf4a738c}\label{classTexture2D_a8e1f4a12976d1a76547bea69cf4a738c} 
+\index{Texture2D@{Texture2D}!bind@{bind}}
+\index{bind@{bind}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void Texture2\+D\+::bind (\begin{DoxyParamCaption}\item[{const unsigned int}]{slot = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+
+
+Binds the texture to a specific texture slot in the GPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em slot} & Texture slot to bind to (default is 0). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTexture2D_a53873d77797966d77a5caa1eaa1f448a}\label{classTexture2D_a53873d77797966d77a5caa1eaa1f448a} 
+\index{Texture2D@{Texture2D}!create@{create}}
+\index{create@{create}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTexture2D}{Texture2D}} $>$ Texture2\+D\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{unsigned int}]{wrapS = {\ttfamily GL\+\_\+MIRRORED\+\_\+REPEAT},  }\item[{unsigned int}]{wrapT = {\ttfamily GL\+\_\+MIRRORED\+\_\+REPEAT},  }\item[{unsigned int}]{min\+Filter = {\ttfamily GL\+\_\+LINEAR\+\_\+MIPMAP\+\_\+LINEAR},  }\item[{unsigned int}]{mag\+Filter = {\ttfamily GL\+\_\+LINEAR} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads an image from a file and creates a 2D Open\+GL texture. 
+
+This static function creates a new \doxylink{classTexture2D}{Texture2D} object, loads the image from the specified file using stb\+\_\+image, uploads it to the GPU, sets wrapping and filtering options, and generates mipmaps. If the image fails to load, the function returns {\ttfamily nullptr}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the texture image file. \\
+\hline
+{\em wrapS} & Wrapping mode for the S (X) coordinate. Default\+: GL\+\_\+\+MIRRORED\+\_\+\+REPEAT. \\
+\hline
+{\em wrapT} & Wrapping mode for the T (Y) coordinate. Default\+: GL\+\_\+\+MIRRORED\+\_\+\+REPEAT. \\
+\hline
+{\em min\+Filter} & Minification filter. Default\+: GL\+\_\+\+LINEAR\+\_\+\+MIPMAP\+\_\+\+LINEAR. \\
+\hline
+{\em mag\+Filter} & Magnification filter. Default\+: GL\+\_\+\+LINEAR. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Texture2\+D$>$ Shared pointer to the loaded texture, or {\ttfamily nullptr} if loading failed. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTexture2D_a53873d77797966d77a5caa1eaa1f448a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classTexture2D_a0fece49baa70c5257db2e9ddf88b8fcd}\label{classTexture2D_a0fece49baa70c5257db2e9ddf88b8fcd} 
+\index{Texture2D@{Texture2D}!getPath@{getPath}}
+\index{getPath@{getPath}!Texture2D@{Texture2D}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily std\+::string Texture2\+D\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the file path of the texture. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Path to the texture image file. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/textures/\mbox{\hyperlink{Texture2D_8hpp}{Texture2\+D.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/textures/\mbox{\hyperlink{Texture2D_8cpp}{Texture2\+D.\+cpp}}\end{DoxyCompactItemize}

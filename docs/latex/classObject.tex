@@ -1,0 +1,213 @@
+\doxysection{Object Class Reference}
+\hypertarget{classObject}{}\label{classObject}\index{Object@{Object}}
+
+
+Represents a 3D object loaded from an .obj file.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classObject_aa20df9b729a0fa3161fbaf981d7cac95}\label{classObject_aa20df9b729a0fa3161fbaf981d7cac95} 
+{\bfseries Object} (const \mbox{\hyperlink{classObject}{Object}} \&)=delete
+\item 
+\Hypertarget{classObject_ae08b9123d898a86bbcdf7c242a52c786}\label{classObject_ae08b9123d898a86bbcdf7c242a52c786} 
+{\bfseries Object} (\mbox{\hyperlink{classObject}{Object}} \&\&other) noexcept
+\item 
+\Hypertarget{classObject_a952b21b70315bbd70333893926c5ca16}\label{classObject_a952b21b70315bbd70333893926c5ca16} 
+\mbox{\hyperlink{classObject}{Object}} \& {\bfseries operator=} (const \mbox{\hyperlink{classObject}{Object}} \&)=delete
+\item 
+\Hypertarget{classObject_a66c9ef1ea665d6f3226bc490f1ee8ab8}\label{classObject_a66c9ef1ea665d6f3226bc490f1ee8ab8} 
+\mbox{\hyperlink{classObject}{Object}} \& {\bfseries operator=} (\mbox{\hyperlink{classObject}{Object}} \&\&other) noexcept
+\item 
+\Hypertarget{classObject_a5cd74912f7047f3e1a6c40731bf3094f}\label{classObject_a5cd74912f7047f3e1a6c40731bf3094f} 
+void {\bfseries bind} () const
+\begin{DoxyCompactList}\small\item\em Binds the object\textquotesingle{}s \doxylink{structVertex}{Vertex} Array \doxylink{classObject}{Object} (VAO) for rendering. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_ab71ab1b42aa43091262c3b4a1f61d0b5}\label{classObject_ab71ab1b42aa43091262c3b4a1f61d0b5} 
+void {\bfseries unbind} () const
+\begin{DoxyCompactList}\small\item\em Unbinds the object\textquotesingle{}s \doxylink{structVertex}{Vertex} Array \doxylink{classObject}{Object} (VAO). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_ac12ede689a57de5c31579e2bbee96823}{update\+Rotation\+MatrixY}} (const float angle)
+\begin{DoxyCompactList}\small\item\em Updates the object\textquotesingle{}s rotation around its local Y axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a6ad6e1e21f47e841563953114e4c3c00}{move\+Xaxis}} (const float direction, const double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Moves the object along the X axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a6120f3644e0467599bd6fbdf30608295}{move\+Yaxis}} (const float direction, const double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Moves the object along the Y axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a30f7035482729f0214fdc8e1e4eca14f}{move\+Zaxis}} (const float direction, const double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Moves the object along the Z axis. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_a89eeda1ff83038b10a9da63a3facf542}\label{classObject_a89eeda1ff83038b10a9da63a3facf542} 
+const \mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \& {\bfseries get\+VAO} () const
+\item 
+\Hypertarget{classObject_ae20b0bd8285b061bcb48e8d2941859de}\label{classObject_ae20b0bd8285b061bcb48e8d2941859de} 
+std\+::array$<$ float, 3 $>$ {\bfseries get\+Center} () const
+\item 
+\Hypertarget{classObject_abdfa025521dd7d21cbb6095800f73315}\label{classObject_abdfa025521dd7d21cbb6095800f73315} 
+std\+::vector$<$ unsigned int $>$ {\bfseries get\+Indices} () const
+\item 
+std\+::array$<$ float, 16 $>$ \mbox{\hyperlink{classObject_acdff32ec34c51bf0307d32b9b318883b}{get\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Computes and returns the object\textquotesingle{}s model transformation matrix. \end{DoxyCompactList}\item 
+\Hypertarget{classObject_af7b6b76add24d62f7467afd24f6fd909}\label{classObject_af7b6b76add24d62f7467afd24f6fd909} 
+std\+::string {\bfseries get\+Texture2\+DPath} () const
+\item 
+\Hypertarget{classObject_ae9c1365ab69eed99a53176b7268b8771}\label{classObject_ae9c1365ab69eed99a53176b7268b8771} 
+const std\+::array$<$ float, 3 $>$ {\bfseries get\+Position} () const
+\item 
+\Hypertarget{classObject_aaa6cff5ea70fca6c9de8c3453134ae56}\label{classObject_aaa6cff5ea70fca6c9de8c3453134ae56} 
+const std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classMaterial}{Material}} $>$ \& {\bfseries get\+Material} ()
+\item 
+\Hypertarget{classObject_a36a6d4a4c7b086aba9047207943d6089}\label{classObject_a36a6d4a4c7b086aba9047207943d6089} 
+void {\bfseries set\+Texture2D} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTexture2D}{Texture2D}} $>$ \&texture)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_a46d2c2f39d35afcce13f6314ba9887b0}{create}} (const std\+::string \&obj\+File\+Path)
+\begin{DoxyCompactList}\small\item\em Creates and initializes an \doxylink{classObject}{Object} from a .obj file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3D object loaded from an .obj file. 
+
+\doxylink{classObject}{Object} contains vertex and index data, transformation matrices, a texture, and Open\+GL buffers (VAO, VBO, IBO). 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classObject_a46d2c2f39d35afcce13f6314ba9887b0}\label{classObject_a46d2c2f39d35afcce13f6314ba9887b0} 
+\index{Object@{Object}!create@{create}}
+\index{create@{create}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ Object\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{obj\+File\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates and initializes an \doxylink{classObject}{Object} from a .obj file. 
+
+This static function performs the following steps\+:
+\begin{DoxyEnumerate}
+\item Allocates a new \doxylink{classObject}{Object} instance on the heap.
+\item Parses the specified .obj file using {\ttfamily parse\+File()}. Returns {\ttfamily nullptr} if parsing fails.
+\item Initializes Open\+GL buffers (VAO/\+VBO/\+IBO) via {\ttfamily init\+Buffers()}.
+\item Calculates the geometric center of the object and its scale factor.
+\item Sets the object\textquotesingle{}s transformation matrices ({\ttfamily m\+\_\+matrix}, {\ttfamily m\+\_\+translation\+Matrix}, {\ttfamily m\+\_\+rotation\+Matrix}) to identity.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj\+File\+Path} & Path to the .obj file to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$\+Object$>$ Returns a unique pointer to the fully initialized \doxylink{classObject}{Object} on success, or {\ttfamily nullptr} if the file could not be parsed. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{classObject_a46d2c2f39d35afcce13f6314ba9887b0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_acdff32ec34c51bf0307d32b9b318883b}\label{classObject_acdff32ec34c51bf0307d32b9b318883b} 
+\index{Object@{Object}!getMatrix@{getMatrix}}
+\index{getMatrix@{getMatrix}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getMatrix()}{getMatrix()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 16 $>$ Object\+::get\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes and returns the object\textquotesingle{}s model transformation matrix. 
+
+Combines translation, rotation, scaling, and center offset to produce the final 4x4 model matrix used for rendering the object in world space.
+
+\begin{DoxyReturn}{Returns}
+std\+::array$<$float, 16$>$ The object\textquotesingle{}s model matrix. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classObject_acdff32ec34c51bf0307d32b9b318883b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_a6ad6e1e21f47e841563953114e4c3c00}\label{classObject_a6ad6e1e21f47e841563953114e4c3c00} 
+\index{Object@{Object}!moveXaxis@{moveXaxis}}
+\index{moveXaxis@{moveXaxis}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{moveXaxis()}{moveXaxis()}}
+{\footnotesize\ttfamily void Object\+::move\+Xaxis (\begin{DoxyParamCaption}\item[{const float}]{direction,  }\item[{const double}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Moves the object along the X axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Movement direction. \\
+\hline
+{\em delta\+Time} & Time elapsed since the last frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classObject_a6120f3644e0467599bd6fbdf30608295}\label{classObject_a6120f3644e0467599bd6fbdf30608295} 
+\index{Object@{Object}!moveYaxis@{moveYaxis}}
+\index{moveYaxis@{moveYaxis}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{moveYaxis()}{moveYaxis()}}
+{\footnotesize\ttfamily void Object\+::move\+Yaxis (\begin{DoxyParamCaption}\item[{const float}]{direction,  }\item[{const double}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Moves the object along the Y axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Movement direction. \\
+\hline
+{\em delta\+Time} & Time elapsed since the last frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classObject_a30f7035482729f0214fdc8e1e4eca14f}\label{classObject_a30f7035482729f0214fdc8e1e4eca14f} 
+\index{Object@{Object}!moveZaxis@{moveZaxis}}
+\index{moveZaxis@{moveZaxis}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{moveZaxis()}{moveZaxis()}}
+{\footnotesize\ttfamily void Object\+::move\+Zaxis (\begin{DoxyParamCaption}\item[{const float}]{direction,  }\item[{const double}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Moves the object along the Z axis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Movement direction. \\
+\hline
+{\em delta\+Time} & Time elapsed since the last frame. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classObject_ac12ede689a57de5c31579e2bbee96823}\label{classObject_ac12ede689a57de5c31579e2bbee96823} 
+\index{Object@{Object}!updateRotationMatrixY@{updateRotationMatrixY}}
+\index{updateRotationMatrixY@{updateRotationMatrixY}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{updateRotationMatrixY()}{updateRotationMatrixY()}}
+{\footnotesize\ttfamily void Object\+::update\+Rotation\+MatrixY (\begin{DoxyParamCaption}\item[{const float}]{angle }\end{DoxyParamCaption})}
+
+
+
+Updates the object\textquotesingle{}s rotation around its local Y axis. 
+
+Rotates the object around its center by the given angle. The rotation is accumulated with the existing rotation matrix, allowing multiple rotations to be applied sequentially around the object\textquotesingle{}s own center.
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Rotation angle in degrees. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_ac12ede689a57de5c31579e2bbee96823_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/core/\mbox{\hyperlink{Object_8hpp}{Object.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/core/\mbox{\hyperlink{Object_8cpp}{Object.\+cpp}}\end{DoxyCompactItemize}

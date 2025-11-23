@@ -1,0 +1,212 @@
+\doxysection{/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/utils/vector\+Operations.cpp File Reference}
+\hypertarget{vectorOperations_8cpp}{}\label{vectorOperations_8cpp}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/vectorOperations.cpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/vectorOperations.cpp}}
+
+
+File contains vector functions.  
+
+
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+Include dependency graph for vector\+Operations.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{vectorOperations_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::array$<$ float, 3 $>$ \mbox{\hyperlink{vectorOperations_8cpp_a1ceb84441ee1328801fd719d8b3bb40c}{subtract\+Vec}} (const std\+::array$<$ float, 3 $>$ \&a, const std\+::array$<$ float, 3 $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Subtracts one 3D vector from another. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 3 $>$ \mbox{\hyperlink{vectorOperations_8cpp_a2ee4703a6190ca3dd292bae5f26be183}{add\+Vec}} (const std\+::array$<$ float, 3 $>$ \&a, const std\+::array$<$ float, 3 $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Adds two 3D vectors. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 3 $>$ \mbox{\hyperlink{vectorOperations_8cpp_a242aa56681b3b3c2c382ecb71aa277df}{normalize\+Vec}} (const std\+::array$<$ float, 3 $>$ \&vec)
+\begin{DoxyCompactList}\small\item\em Normalizes a 3D vector. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 3 $>$ \mbox{\hyperlink{vectorOperations_8cpp_a2b4011ef615602166da022d080bfe141}{cross\+Prod\+Vec}} (const std\+::array$<$ float, 3 $>$ \&a, const std\+::array$<$ float, 3 $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Computes the cross product of two 3D vectors. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{vectorOperations_8cpp_a763d705143c1f3dc35b336cfdc04fd34}{dot\+Prod\+Vec}} (const std\+::array$<$ float, 3 $>$ \&a, const std\+::array$<$ float, 3 $>$ \&b)
+\begin{DoxyCompactList}\small\item\em Computes the dot product (scalar product) of two 3D vectors. \end{DoxyCompactList}\item 
+std\+::array$<$ float, 3 $>$ \mbox{\hyperlink{vectorOperations_8cpp_a6f9c9b93d61d589f2cd639696ee13c31}{multiply\+Vec\+By\+Float}} (const std\+::array$<$ float, 3 $>$ \&vec, float x)
+\begin{DoxyCompactList}\small\item\em Multiplies a 3D vector by a scalar value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+File contains vector functions. 
+
+\begin{DoxyAuthor}{Author}
+Patryk 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+12-\/11-\/2025
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{vectorOperations_8cpp_a2ee4703a6190ca3dd292bae5f26be183}\label{vectorOperations_8cpp_a2ee4703a6190ca3dd292bae5f26be183} 
+\index{vectorOperations.cpp@{vectorOperations.cpp}!addVec@{addVec}}
+\index{addVec@{addVec}!vectorOperations.cpp@{vectorOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{addVec()}{addVec()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 3 $>$ add\+Vec (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 3 $>$ \&}]{a,  }\item[{const std\+::array$<$ float, 3 $>$ \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Adds two 3D vectors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first vector. \\
+\hline
+{\em b} & The second vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new vector representing the sum (a + b). 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{vectorOperations_8cpp_a2ee4703a6190ca3dd292bae5f26be183_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vectorOperations_8cpp_a2b4011ef615602166da022d080bfe141}\label{vectorOperations_8cpp_a2b4011ef615602166da022d080bfe141} 
+\index{vectorOperations.cpp@{vectorOperations.cpp}!crossProdVec@{crossProdVec}}
+\index{crossProdVec@{crossProdVec}!vectorOperations.cpp@{vectorOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{crossProdVec()}{crossProdVec()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 3 $>$ cross\+Prod\+Vec (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 3 $>$ \&}]{a,  }\item[{const std\+::array$<$ float, 3 $>$ \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Computes the cross product of two 3D vectors. 
+
+Returns a vector that is perpendicular to both input vectors. The result follows the right-\/hand rule.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first input vector. \\
+\hline
+{\em b} & The second input vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cross product of vector a and b. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vectorOperations_8cpp_a2b4011ef615602166da022d080bfe141_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vectorOperations_8cpp_a763d705143c1f3dc35b336cfdc04fd34}\label{vectorOperations_8cpp_a763d705143c1f3dc35b336cfdc04fd34} 
+\index{vectorOperations.cpp@{vectorOperations.cpp}!dotProdVec@{dotProdVec}}
+\index{dotProdVec@{dotProdVec}!vectorOperations.cpp@{vectorOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{dotProdVec()}{dotProdVec()}}
+{\footnotesize\ttfamily float dot\+Prod\+Vec (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 3 $>$ \&}]{a,  }\item[{const std\+::array$<$ float, 3 $>$ \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Computes the dot product (scalar product) of two 3D vectors. 
+
+Measures how aligned two vectors are with each other. A result of 1 means they point in the same direction, 0 means they are perpendicular, and -\/1 means they are opposite.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first input vector. \\
+\hline
+{\em b} & The second input vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The dot product value (a \texorpdfstring{$\ast$}{*} b). 
+\end{DoxyReturn}
+\Hypertarget{vectorOperations_8cpp_a6f9c9b93d61d589f2cd639696ee13c31}\label{vectorOperations_8cpp_a6f9c9b93d61d589f2cd639696ee13c31} 
+\index{vectorOperations.cpp@{vectorOperations.cpp}!multiplyVecByFloat@{multiplyVecByFloat}}
+\index{multiplyVecByFloat@{multiplyVecByFloat}!vectorOperations.cpp@{vectorOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{multiplyVecByFloat()}{multiplyVecByFloat()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 3 $>$ multiply\+Vec\+By\+Float (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 3 $>$ \&}]{vec,  }\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+Multiplies a 3D vector by a scalar value. 
+
+Scales the vector uniformly in all directions by the given scalar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The input vector. \\
+\hline
+{\em x} & The scalar value to multiply by. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new scaled vector. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vectorOperations_8cpp_a6f9c9b93d61d589f2cd639696ee13c31_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vectorOperations_8cpp_a242aa56681b3b3c2c382ecb71aa277df}\label{vectorOperations_8cpp_a242aa56681b3b3c2c382ecb71aa277df} 
+\index{vectorOperations.cpp@{vectorOperations.cpp}!normalizeVec@{normalizeVec}}
+\index{normalizeVec@{normalizeVec}!vectorOperations.cpp@{vectorOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{normalizeVec()}{normalizeVec()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 3 $>$ normalize\+Vec (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 3 $>$ \&}]{vec }\end{DoxyParamCaption})}
+
+
+
+Normalizes a 3D vector. 
+
+Converts the vector into a unit vector (length = 1) while preserving its direction. If the input vector has zero length, a zero vector is returned to avoid division by zero.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vec} & The input vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A normalized version of the input vector. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vectorOperations_8cpp_a242aa56681b3b3c2c382ecb71aa277df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{vectorOperations_8cpp_a1ceb84441ee1328801fd719d8b3bb40c}\label{vectorOperations_8cpp_a1ceb84441ee1328801fd719d8b3bb40c} 
+\index{vectorOperations.cpp@{vectorOperations.cpp}!subtractVec@{subtractVec}}
+\index{subtractVec@{subtractVec}!vectorOperations.cpp@{vectorOperations.cpp}}
+\doxysubsubsection{\texorpdfstring{subtractVec()}{subtractVec()}}
+{\footnotesize\ttfamily std\+::array$<$ float, 3 $>$ subtract\+Vec (\begin{DoxyParamCaption}\item[{const std\+::array$<$ float, 3 $>$ \&}]{a,  }\item[{const std\+::array$<$ float, 3 $>$ \&}]{b }\end{DoxyParamCaption})}
+
+
+
+Subtracts one 3D vector from another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & The first vector. \\
+\hline
+{\em b} & The second vector to subtract from the first. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new vector representing the difference (a -\/ b). 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{vectorOperations_8cpp_a1ceb84441ee1328801fd719d8b3bb40c_icgraph}
+\end{center}
+\end{figure}

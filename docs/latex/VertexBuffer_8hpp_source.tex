@@ -1,0 +1,36 @@
+\doxysection{Vertex\+Buffer.\+hpp}
+\hypertarget{VertexBuffer_8hpp_source}{}\label{VertexBuffer_8hpp_source}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/graphics/VertexBuffer.hpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/graphics/VertexBuffer.hpp}}
+\mbox{\hyperlink{VertexBuffer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SCOP\_VERTEXBUFFER\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SCOP\_VERTEXBUFFER\_HPP}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <GL/glew.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertex}{Vertex}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ *vertices,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}(\textcolor{keyword}{const}\ std::vector<float>\ \&vertices);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}(\textcolor{keyword}{const}\ std::vector<Vertex>\ \&vertices);}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}(\mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classVertexBuffer}{\string~VertexBuffer}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}\ \&operator=(\mbox{\hyperlink{classVertexBuffer}{VertexBuffer}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertexBuffer_afc06aa70b14e2379e8565afb2e017bd2}{bind}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVertexBuffer_a85fad27f8f068b0610ff052a2a5496f1}{unbind}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_id;}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SCOP\_VERTEXBUFFER\_HPP}}
+
+\end{DoxyCode}

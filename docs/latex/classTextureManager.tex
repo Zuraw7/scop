@@ -1,0 +1,133 @@
+\doxysection{Texture\+Manager Class Reference}
+\hypertarget{classTextureManager}{}\label{classTextureManager}\index{TextureManager@{TextureManager}}
+
+
+Manages loading and binding of textures.  
+
+
+
+
+{\ttfamily \#include $<$Texture\+Manager.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTextureManager_ad76abb178b37cedf4514eb0154349935}{Texture\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the texture manager and queries the GPU for maximum texture slots. \end{DoxyCompactList}\item 
+\Hypertarget{classTextureManager_ae859e3c923367dbc7402e5e941903143}\label{classTextureManager_ae859e3c923367dbc7402e5e941903143} 
+{\bfseries Texture\+Manager} (const \mbox{\hyperlink{classTextureManager}{Texture\+Manager}} \&other)
+\item 
+\Hypertarget{classTextureManager_a4c66c168236f7c7fb3b8b86e771a1297}\label{classTextureManager_a4c66c168236f7c7fb3b8b86e771a1297} 
+{\bfseries Texture\+Manager} (\mbox{\hyperlink{classTextureManager}{Texture\+Manager}} \&\&other) noexcept
+\item 
+\Hypertarget{classTextureManager_ada97e55ffba0b562ba6259db3ac4cf97}\label{classTextureManager_ada97e55ffba0b562ba6259db3ac4cf97} 
+\mbox{\hyperlink{classTextureManager}{Texture\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classTextureManager}{Texture\+Manager}} \&other)
+\item 
+\Hypertarget{classTextureManager_aa385fbae046dcb02bed2e2af393fba77}\label{classTextureManager_aa385fbae046dcb02bed2e2af393fba77} 
+\mbox{\hyperlink{classTextureManager}{Texture\+Manager}} \& {\bfseries operator=} (\mbox{\hyperlink{classTextureManager}{Texture\+Manager}} \&\&other) noexcept
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTexture2D}{Texture2D}} $>$ \mbox{\hyperlink{classTextureManager_aff38041e48245d2c388b5ad2d21cd7c1}{load\+Texture2D}} (const std\+::string \&path, unsigned int wrapS=GL\+\_\+\+MIRRORED\+\_\+\+REPEAT, unsigned int wrapT=GL\+\_\+\+MIRRORED\+\_\+\+REPEAT, unsigned int min\+Filter=GL\+\_\+\+LINEAR\+\_\+\+MIPMAP\+\_\+\+LINEAR, unsigned int mag\+Filter=GL\+\_\+\+LINEAR)
+\begin{DoxyCompactList}\small\item\em Loads a 2D texture or returns an existing one if already loaded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextureManager_a5fe7a6bae0afbcde2d5d34ed3fe08612}{bind\+Texture}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Binds the texture with the given path to its assigned GPU slot. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{classTextureManager_a3b7f3b4a2f72030d45dda4f20923dafd}{get\+Slot}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Returns the GPU slot assigned to a texture. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages loading and binding of textures. 
+
+\doxylink{classTextureManager}{Texture\+Manager} handles loading textures from files, storing them, and binding them to GPU texture slots. It ensures that the same texture is not loaded multiple times and keeps track of assigned slots. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTextureManager_ad76abb178b37cedf4514eb0154349935}\label{classTextureManager_ad76abb178b37cedf4514eb0154349935} 
+\index{TextureManager@{TextureManager}!TextureManager@{TextureManager}}
+\index{TextureManager@{TextureManager}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{TextureManager()}{TextureManager()}}
+{\footnotesize\ttfamily Texture\+Manager\+::\+Texture\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the texture manager and queries the GPU for maximum texture slots. 
+
+Sets the next available slot to 0 and retrieves the maximum number of combined texture image units supported by the GPU. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTextureManager_a5fe7a6bae0afbcde2d5d34ed3fe08612}\label{classTextureManager_a5fe7a6bae0afbcde2d5d34ed3fe08612} 
+\index{TextureManager@{TextureManager}!bindTexture@{bindTexture}}
+\index{bindTexture@{bindTexture}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{bindTexture()}{bindTexture()}}
+{\footnotesize\ttfamily void Texture\+Manager\+::bind\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Binds the texture with the given path to its assigned GPU slot. 
+
+Finds the texture in the manager and binds it to the correct slot. Does nothing if the texture is not found.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the texture file to bind. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classTextureManager_a3b7f3b4a2f72030d45dda4f20923dafd}\label{classTextureManager_a3b7f3b4a2f72030d45dda4f20923dafd} 
+\index{TextureManager@{TextureManager}!getSlot@{getSlot}}
+\index{getSlot@{getSlot}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{getSlot()}{getSlot()}}
+{\footnotesize\ttfamily unsigned int Texture\+Manager\+::get\+Slot (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Returns the GPU slot assigned to a texture. 
+
+Looks up the slot assigned to the texture with the given path. If the texture is not found, prints a warning and returns slot 0.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the texture file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned int Assigned texture slot, or 0 if not found. 
+\end{DoxyReturn}
+\Hypertarget{classTextureManager_aff38041e48245d2c388b5ad2d21cd7c1}\label{classTextureManager_aff38041e48245d2c388b5ad2d21cd7c1} 
+\index{TextureManager@{TextureManager}!loadTexture2D@{loadTexture2D}}
+\index{loadTexture2D@{loadTexture2D}!TextureManager@{TextureManager}}
+\doxysubsubsection{\texorpdfstring{loadTexture2D()}{loadTexture2D()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classTexture2D}{Texture2D}} $>$ Texture\+Manager\+::load\+Texture2D (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{unsigned int}]{wrapS = {\ttfamily GL\+\_\+MIRRORED\+\_\+REPEAT},  }\item[{unsigned int}]{wrapT = {\ttfamily GL\+\_\+MIRRORED\+\_\+REPEAT},  }\item[{unsigned int}]{min\+Filter = {\ttfamily GL\+\_\+LINEAR\+\_\+MIPMAP\+\_\+LINEAR},  }\item[{unsigned int}]{mag\+Filter = {\ttfamily GL\+\_\+LINEAR} }\end{DoxyParamCaption})}
+
+
+
+Loads a 2D texture or returns an existing one if already loaded. 
+
+This function checks if a texture with the given path is already loaded in the manager. If it exists, the existing texture is returned. Otherwise, it attempts to create a new \doxylink{classTexture2D}{Texture2D} using {\ttfamily \doxylink{classTexture2D_a53873d77797966d77a5caa1eaa1f448a}{Texture2\+D\+::create()}}. If creation succeeds, the texture is stored in the manager, assigned a slot, and returned. If creation fails (e.\+g., file not found or invalid format), {\ttfamily nullptr} is returned and an error message is printed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & Path to the texture file. \\
+\hline
+{\em wrapS} & Wrapping mode for the S (X) coordinate. Default\+: GL\+\_\+\+MIRRORED\+\_\+\+REPEAT. \\
+\hline
+{\em wrapT} & Wrapping mode for the T (Y) coordinate. Default\+: GL\+\_\+\+MIRRORED\+\_\+\+REPEAT. \\
+\hline
+{\em min\+Filter} & Minification filter. Default\+: GL\+\_\+\+LINEAR\+\_\+\+MIPMAP\+\_\+\+LINEAR. \\
+\hline
+{\em mag\+Filter} & Magnification filter. Default\+: GL\+\_\+\+LINEAR. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Texture2\+D$>$ Shared pointer to the loaded texture, or {\ttfamily nullptr} if loading failed. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTextureManager_aff38041e48245d2c388b5ad2d21cd7c1_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/textures/\mbox{\hyperlink{TextureManager_8hpp}{Texture\+Manager.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/textures/\mbox{\hyperlink{TextureManager_8cpp}{Texture\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Camera::updateCameraDirection" name="Camera::updateCameraDirection">
+<area shape="rect" id="Node000001" title="Updates the camera&#39;s orientation based on mouse movement." alt="" coords="195,5,431,31"/>
+<area shape="rect" id="Node000002" href="$callbacks_8cpp.html#ae49f0c4c2064be8fbcf555f46460b7df" title="Callback function for mouse movement." alt="" coords="5,5,147,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,21,147,21,147,15,181,15"/>
+</map>

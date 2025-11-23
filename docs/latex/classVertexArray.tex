@@ -1,0 +1,93 @@
+\doxysection{Vertex\+Array Class Reference}
+\hypertarget{classVertexArray}{}\label{classVertexArray}\index{VertexArray@{VertexArray}}
+
+
+Wraps an Open\+GL \doxylink{structVertex}{Vertex} Array \doxylink{classObject}{Object} (VAO).  
+
+
+
+
+{\ttfamily \#include $<$Vertex\+Array.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVertexArray_ab8a2dcce9698f96dac5f9a19c6979d03}{Vertex\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{structVertex}{Vertex} Array \doxylink{classObject}{Object} (VAO) and binds it. \end{DoxyCompactList}\item 
+\Hypertarget{classVertexArray_a4a7b686d4084b4787daa55701507d911}\label{classVertexArray_a4a7b686d4084b4787daa55701507d911} 
+{\bfseries Vertex\+Array} (const \mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&)=delete
+\item 
+\Hypertarget{classVertexArray_af20bc66b0919e289f3d82e0979e42f99}\label{classVertexArray_af20bc66b0919e289f3d82e0979e42f99} 
+{\bfseries Vertex\+Array} (\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&\&other) noexcept
+\item 
+\Hypertarget{classVertexArray_a0f33f8276cb8fea67e015ac85c7cc97a}\label{classVertexArray_a0f33f8276cb8fea67e015ac85c7cc97a} 
+\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \& {\bfseries operator=} (const \mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&)=delete
+\item 
+\Hypertarget{classVertexArray_ac17181dbeff699f5d24dd143f6004004}\label{classVertexArray_ac17181dbeff699f5d24dd143f6004004} 
+\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \& {\bfseries operator=} (\mbox{\hyperlink{classVertexArray}{Vertex\+Array}} \&\&other) noexcept
+\item 
+void \mbox{\hyperlink{classVertexArray_a79f2038962570dd740cbf50399a1d0a6}{bind}} () const
+\begin{DoxyCompactList}\small\item\em Binds the VAO to the current Open\+GL context. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classVertexArray_ab5243983abbab1cefeb041d8b1112b50}{unbind}} () const
+\begin{DoxyCompactList}\small\item\em Unbinds the VAO from the current Open\+GL context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wraps an Open\+GL \doxylink{structVertex}{Vertex} Array \doxylink{classObject}{Object} (VAO). 
+
+The \doxylink{classVertexArray}{Vertex\+Array} class is responsible for creating, binding, and unbinding a VAO in GPU memory. It stores the state needed to supply vertex data to the GPU, including vertex buffers and attribute pointers. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classVertexArray_ab8a2dcce9698f96dac5f9a19c6979d03}\label{classVertexArray_ab8a2dcce9698f96dac5f9a19c6979d03} 
+\index{VertexArray@{VertexArray}!VertexArray@{VertexArray}}
+\index{VertexArray@{VertexArray}!VertexArray@{VertexArray}}
+\doxysubsubsection{\texorpdfstring{VertexArray()}{VertexArray()}}
+{\footnotesize\ttfamily Vertex\+Array\+::\+Vertex\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{structVertex}{Vertex} Array \doxylink{classObject}{Object} (VAO) and binds it. 
+
+Generates an Open\+GL VAO, stores its ID, and binds it to the current context. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classVertexArray_a79f2038962570dd740cbf50399a1d0a6}\label{classVertexArray_a79f2038962570dd740cbf50399a1d0a6} 
+\index{VertexArray@{VertexArray}!bind@{bind}}
+\index{bind@{bind}!VertexArray@{VertexArray}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily void Vertex\+Array\+::bind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Binds the VAO to the current Open\+GL context. 
+
+After calling this function, the VAO is active and vertex buffers/attributes associated with it will be used for rendering. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classVertexArray_a79f2038962570dd740cbf50399a1d0a6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classVertexArray_ab5243983abbab1cefeb041d8b1112b50}\label{classVertexArray_ab5243983abbab1cefeb041d8b1112b50} 
+\index{VertexArray@{VertexArray}!unbind@{unbind}}
+\index{unbind@{unbind}!VertexArray@{VertexArray}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily void Vertex\+Array\+::unbind (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Unbinds the VAO from the current Open\+GL context. 
+
+Ensures that no VAO is bound, preventing accidental use of this VAO in subsequent draw calls. Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classVertexArray_ab5243983abbab1cefeb041d8b1112b50_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/graphics/\mbox{\hyperlink{VertexArray_8hpp}{Vertex\+Array.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/graphics/\mbox{\hyperlink{VertexArray_8cpp}{Vertex\+Array.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="multiplyVecByFloat" name="multiplyVecByFloat">
+<area shape="rect" id="Node000001" title="Multiplies a 3D vector by a scalar value." alt="" coords="253,5,403,31"/>
+<area shape="rect" id="Node000002" href="$classCamera.html#af47982264773106d338c38ec9663860d" title="Moves the camera in the specified direction." alt="" coords="5,5,205,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="239,21,205,21,205,15,239,15"/>
+</map>

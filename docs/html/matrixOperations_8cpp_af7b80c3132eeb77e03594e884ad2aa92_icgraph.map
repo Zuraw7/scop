@@ -1,0 +1,5 @@
+<map id="getRotationMatrixY" name="getRotationMatrixY">
+<area shape="rect" id="Node000001" title="Creates a rotation matrix for rotation around the Y&#45;axis." alt="" coords="276,5,424,31"/>
+<area shape="rect" id="Node000002" href="$classObject.html#ac12ede689a57de5c31579e2bbee96823" title="Updates the object&#39;s rotation around its local Y axis." alt="" coords="5,5,228,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,21,228,21,228,15,262,15"/>
+</map>

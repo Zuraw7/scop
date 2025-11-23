@@ -1,0 +1,33 @@
+\doxysection{Index\+Buffer.\+hpp}
+\hypertarget{IndexBuffer_8hpp_source}{}\label{IndexBuffer_8hpp_source}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/graphics/IndexBuffer.hpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/graphics/IndexBuffer.hpp}}
+\mbox{\hyperlink{IndexBuffer_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SCOP\_INDEXBUFFER\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SCOP\_INDEXBUFFER\_HPP}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <GL/glew.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *indices,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{size\_t}\ size);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}(\textcolor{keyword}{const}\ std::vector<unsigned\ int>\ \&indices);}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}(\mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classIndexBuffer}{\string~IndexBuffer}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}\ \&operator=(\mbox{\hyperlink{classIndexBuffer}{IndexBuffer}}\ \&\&other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIndexBuffer_ae9d8b583fd99e86874cc8c46f2ed1c17}{bind}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classIndexBuffer_a29815a01631f16261b0c7e1b9a6959ea}{unbind}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ m\_id;}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SCOP\_INDEXBUFFER\_HPP}}
+
+\end{DoxyCode}

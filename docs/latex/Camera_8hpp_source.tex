@@ -1,0 +1,75 @@
+\doxysection{Camera.\+hpp}
+\hypertarget{Camera_8hpp_source}{}\label{Camera_8hpp_source}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/core/Camera.hpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/core/Camera.hpp}}
+\mbox{\hyperlink{Camera_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SCOP\_CAMERA\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SCOP\_CAMERA\_HPP}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}../utils/utils.hpp"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ NEAR\ 1.0f}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ FAR\ 10.0f}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ WIDTH\ 1980}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ HEIGHT\ 1080}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ SENSITIVITY\ 0.1f}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{Camera_8hpp_ac50367712e3fb5489e444783d19e3d97}{CameraDirection}}\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ NONE\ =\ 0,}
+\DoxyCodeLine{00031\ \ \ \ \ FORWARD,}
+\DoxyCodeLine{00032\ \ \ \ \ BACKWARD,}
+\DoxyCodeLine{00033\ \ \ \ \ LEFT,}
+\DoxyCodeLine{00034\ \ \ \ \ RIGHT,}
+\DoxyCodeLine{00035\ \ \ \ \ UP,}
+\DoxyCodeLine{00036\ \ \ \ \ DOWN}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCamera}{Camera}}\ \{}
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classCamera}{Camera}}()\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classCamera}{Camera}}(\textcolor{keyword}{const}\ std::array<float,\ 3>\ position,\ \textcolor{keyword}{const}\ std::array<float,\ 3>\ target,\ \textcolor{keyword}{const}\ std::array<float,\ 3>\ worldUp);}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classCamera}{Camera}}(\mbox{\hyperlink{classCamera}{Camera}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{classCamera}{Camera}}(\mbox{\hyperlink{classCamera}{Camera}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classCamera}{\string~Camera}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classCamera}{Camera}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCamera}{Camera}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{classCamera}{Camera}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCamera}{Camera}}\&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keyword}{const}\ std::array<float,\ 16>\ \&getCamView();}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keyword}{const}\ std::array<float,\ 16>\ \&getCamProjection()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{const}\ std::array<float,\ 3>\ \&getPosition()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_a585b215676af11cfc36fa3c3dfd750a2}{updateCameraDirection}}(\textcolor{keywordtype}{double}\ dx,\ \textcolor{keywordtype}{double}\ dy);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_af47982264773106d338c38ec9663860d}{updateCameraPos}}(\mbox{\hyperlink{Camera_8hpp_ac50367712e3fb5489e444783d19e3d97}{CameraDirection}}\ dir,\ \textcolor{keywordtype}{double}\ deltaTime);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_a132af0d5ebfd3753d1ad59fadebc8d81}{updateCameraZoom}}(\textcolor{keywordtype}{double}\ dy);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCamera_ad424b8b92e580508caf21337b69b93fa}{updateCameraVectors}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{comment}{//\ Vectors}}
+\DoxyCodeLine{00068\ \ \ \ \ std::array<float,\ 3>\ m\_camPosition;}
+\DoxyCodeLine{00069\ \ \ \ \ std::array<float,\ 3>\ m\_targetPos;}
+\DoxyCodeLine{00070\ \ \ \ \ std::array<float,\ 3>\ m\_worldUp;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ std::array<float,\ 3>\ m\_camDirection;}
+\DoxyCodeLine{00073\ \ \ \ \ std::array<float,\ 3>\ m\_camRight;}
+\DoxyCodeLine{00074\ \ \ \ \ std::array<float,\ 3>\ m\_camUp;}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{comment}{//\ Matrices}}
+\DoxyCodeLine{00077\ \ \ \ \ std::array<float,\ 16>\ m\_view;}
+\DoxyCodeLine{00078\ \ \ \ \ std::array<float,\ 16>\ m\_projection;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_yaw;}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_pitch;}
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_speed;}
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_fov;}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_aspectRatio;}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \ \ \ std::array<float,\ 16>\ lookAt();}
+\DoxyCodeLine{00087\ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SCOP\_CAMERA\_HPP}}
+
+\end{DoxyCode}

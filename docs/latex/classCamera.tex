@@ -1,0 +1,174 @@
+\doxysection{Camera Class Reference}
+\hypertarget{classCamera}{}\label{classCamera}\index{Camera@{Camera}}
+
+
+Represents a 3D camera with position, orientation, and projection.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classCamera_a9a5f727d6cf5565efa1ea186e2236cf5}\label{classCamera_a9a5f727d6cf5565efa1ea186e2236cf5} 
+{\bfseries Camera} (const std\+::array$<$ float, 3 $>$ position, const std\+::array$<$ float, 3 $>$ target, const std\+::array$<$ float, 3 $>$ world\+Up)
+\item 
+\Hypertarget{classCamera_a76166380384a269f0237a8afd9212407}\label{classCamera_a76166380384a269f0237a8afd9212407} 
+{\bfseries Camera} (\mbox{\hyperlink{classCamera}{Camera}} \&)=delete
+\item 
+\Hypertarget{classCamera_acf3613432c3d044cfc28d49a90c3df2f}\label{classCamera_acf3613432c3d044cfc28d49a90c3df2f} 
+{\bfseries Camera} (\mbox{\hyperlink{classCamera}{Camera}} \&\&)=delete
+\item 
+\Hypertarget{classCamera_a815562aa01b5ccfe876fcecbbcfb946d}\label{classCamera_a815562aa01b5ccfe876fcecbbcfb946d} 
+\mbox{\hyperlink{classCamera}{Camera}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCamera}{Camera}} \&)=delete
+\item 
+\Hypertarget{classCamera_a38324c4d03da45d4814249557d7ac5d6}\label{classCamera_a38324c4d03da45d4814249557d7ac5d6} 
+\mbox{\hyperlink{classCamera}{Camera}} \& {\bfseries operator=} (const \mbox{\hyperlink{classCamera}{Camera}} \&\&)=delete
+\item 
+\Hypertarget{classCamera_ad7dfb0d192511ba283066c0d044acabc}\label{classCamera_ad7dfb0d192511ba283066c0d044acabc} 
+const std\+::array$<$ float, 16 $>$ \& {\bfseries get\+Cam\+View} ()
+\item 
+\Hypertarget{classCamera_a517a0a03016617f9da69a6e8ff489e30}\label{classCamera_a517a0a03016617f9da69a6e8ff489e30} 
+const std\+::array$<$ float, 16 $>$ \& {\bfseries get\+Cam\+Projection} () const
+\item 
+\Hypertarget{classCamera_a2648363113e4bacf0c7efdc4106d2a4d}\label{classCamera_a2648363113e4bacf0c7efdc4106d2a4d} 
+const std\+::array$<$ float, 3 $>$ \& {\bfseries get\+Position} () const
+\item 
+void \mbox{\hyperlink{classCamera_a585b215676af11cfc36fa3c3dfd750a2}{update\+Camera\+Direction}} (double dx, double dy)
+\begin{DoxyCompactList}\small\item\em Updates the camera\textquotesingle{}s orientation based on mouse movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_af47982264773106d338c38ec9663860d}{update\+Camera\+Pos}} (\mbox{\hyperlink{Camera_8hpp_ac50367712e3fb5489e444783d19e3d97}{Camera\+Direction}} dir, double delta\+Time)
+\begin{DoxyCompactList}\small\item\em Moves the camera in the specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_a132af0d5ebfd3753d1ad59fadebc8d81}{update\+Camera\+Zoom}} (double dy)
+\begin{DoxyCompactList}\small\item\em Adjusts the camera\textquotesingle{}s zoom (field of view). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCamera_ad424b8b92e580508caf21337b69b93fa}{update\+Camera\+Vectors}} ()
+\begin{DoxyCompactList}\small\item\em Recalculates the camera\textquotesingle{}s directional vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a 3D camera with position, orientation, and projection. 
+
+The \doxylink{classCamera}{Camera} class provides functions for moving, rotating, and zooming a camera in 3D space. It maintains view and projection matrices and can be used to control the viewpoint in Open\+GL rendering. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCamera_a585b215676af11cfc36fa3c3dfd750a2}\label{classCamera_a585b215676af11cfc36fa3c3dfd750a2} 
+\index{Camera@{Camera}!updateCameraDirection@{updateCameraDirection}}
+\index{updateCameraDirection@{updateCameraDirection}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateCameraDirection()}{updateCameraDirection()}}
+{\footnotesize\ttfamily void Camera\+::update\+Camera\+Direction (\begin{DoxyParamCaption}\item[{double}]{dx,  }\item[{double}]{dy }\end{DoxyParamCaption})}
+
+
+
+Updates the camera\textquotesingle{}s orientation based on mouse movement. 
+
+Adjusts the yaw and pitch angles according to the input deltas, applying a sensitivity factor. The pitch is clamped to \mbox{[}-\/89, 89\mbox{]} degrees to prevent gimbal lock. After updating angles, the camera\textquotesingle{}s directional vectors are recalculated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dx} & Horizontal mouse movement (affects yaw). \\
+\hline
+{\em dy} & Vertical mouse movement (affects pitch). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_a585b215676af11cfc36fa3c3dfd750a2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_a585b215676af11cfc36fa3c3dfd750a2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCamera_af47982264773106d338c38ec9663860d}\label{classCamera_af47982264773106d338c38ec9663860d} 
+\index{Camera@{Camera}!updateCameraPos@{updateCameraPos}}
+\index{updateCameraPos@{updateCameraPos}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateCameraPos()}{updateCameraPos()}}
+{\footnotesize\ttfamily void Camera\+::update\+Camera\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Camera_8hpp_ac50367712e3fb5489e444783d19e3d97}{Camera\+Direction}}}]{dir,  }\item[{double}]{delta\+Time }\end{DoxyParamCaption})}
+
+
+
+Moves the camera in the specified direction. 
+
+Updates the camera\textquotesingle{}s position by moving it along its directional vectors based on the given direction and time delta. The movement is scaled by the camera\textquotesingle{}s speed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Direction to move the camera (uses Camera\+Direction enum). \\
+\hline
+{\em delta\+Time} & Time elapsed since the last frame, used to make movement frame-\/rate independent. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_af47982264773106d338c38ec9663860d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCamera_ad424b8b92e580508caf21337b69b93fa}\label{classCamera_ad424b8b92e580508caf21337b69b93fa} 
+\index{Camera@{Camera}!updateCameraVectors@{updateCameraVectors}}
+\index{updateCameraVectors@{updateCameraVectors}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateCameraVectors()}{updateCameraVectors()}}
+{\footnotesize\ttfamily void Camera\+::update\+Camera\+Vectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recalculates the camera\textquotesingle{}s directional vectors. 
+
+Updates the camera\textquotesingle{}s direction, right, and up vectors based on the current yaw and pitch angles. This function ensures that the camera\textquotesingle{}s orientation in 3D space is consistent after changes to yaw, pitch, or any movement. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_ad424b8b92e580508caf21337b69b93fa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_ad424b8b92e580508caf21337b69b93fa_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCamera_a132af0d5ebfd3753d1ad59fadebc8d81}\label{classCamera_a132af0d5ebfd3753d1ad59fadebc8d81} 
+\index{Camera@{Camera}!updateCameraZoom@{updateCameraZoom}}
+\index{updateCameraZoom@{updateCameraZoom}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateCameraZoom()}{updateCameraZoom()}}
+{\footnotesize\ttfamily void Camera\+::update\+Camera\+Zoom (\begin{DoxyParamCaption}\item[{double}]{dy }\end{DoxyParamCaption})}
+
+
+
+Adjusts the camera\textquotesingle{}s zoom (field of view). 
+
+Modifies the camera\textquotesingle{}s field of view (FOV) based on the input delta {\ttfamily dy}. The FOV is clamped between 1.\+0 and 45.\+0 degrees to prevent extreme zooming. After updating the FOV, the projection matrix is recalculated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dy} & Change in zoom (positive or negative) from mouse wheel input. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_a132af0d5ebfd3753d1ad59fadebc8d81_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCamera_a132af0d5ebfd3753d1ad59fadebc8d81_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/core/\mbox{\hyperlink{Camera_8hpp}{Camera.\+hpp}}\item 
+/home/zuraw/\+Desktop/42-\/advanced-\/core/scop/src/core/\mbox{\hyperlink{Camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

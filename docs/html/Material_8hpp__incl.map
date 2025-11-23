@@ -1,0 +1,16 @@
+<map id="/home/zuraw/Desktop/42&#45;advanced&#45;core/scop/src/textures/Material.hpp" name="/home/zuraw/Desktop/42&#45;advanced&#45;core/scop/src/textures/Material.hpp">
+<area shape="rect" id="Node000001" title="Material class declaration." alt="" coords="13,5,203,60"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,181,61,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,62,60,109,48,139,41,169,36,167,43,138,55,107,85,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="69,108,147,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="111,60,111,94,105,94,105,60"/>
+<area shape="rect" id="Node000004" href="$Shader_8hpp.html" title="Shader class declaration." alt="" coords="171,108,336,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="154,58,223,99,221,103,151,62"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="219,136,76,182,74,177,217,131"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="87,181,167,207"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="234,136,161,177,158,172,232,131"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="191,181,315,207"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="256,134,256,168,251,168,251,134"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="340,181,425,207"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="275,131,350,172,348,177,273,136"/>
+</map>

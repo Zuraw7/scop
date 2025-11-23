@@ -1,0 +1,9 @@
+<map id="Camera::updateCameraPos" name="Camera::updateCameraPos">
+<area shape="rect" id="Node000001" title="Moves the camera in the specified direction." alt="" coords="5,55,205,80"/>
+<area shape="rect" id="Node000002" href="$vectorOperations_8cpp.html#a2ee4703a6190ca3dd292bae5f26be183" title="Adds two 3D vectors." alt="" coords="293,5,363,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="163,52,279,26,280,31,164,57"/>
+<area shape="rect" id="Node000003" href="$vectorOperations_8cpp.html#a6f9c9b93d61d589f2cd639696ee13c31" title="Multiplies a 3D vector by a scalar value." alt="" coords="253,55,403,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="206,65,240,65,240,70,206,70"/>
+<area shape="rect" id="Node000004" href="$vectorOperations_8cpp.html#a1ceb84441ee1328801fd719d8b3bb40c" title="Subtracts one 3D vector from another." alt="" coords="279,104,377,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="164,77,266,100,265,105,163,83"/>
+</map>

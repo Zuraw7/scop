@@ -1,0 +1,5 @@
+<map id="scaleMatrix" name="scaleMatrix">
+<area shape="rect" id="Node000001" title="Scales a 4x4 matrix uniformly." alt="" coords="188,5,287,31"/>
+<area shape="rect" id="Node000002" href="$classObject.html#acdff32ec34c51bf0307d32b9b318883b" title="Computes and returns the object&#39;s model transformation matrix." alt="" coords="5,5,140,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,21,140,21,140,15,174,15"/>
+</map>

@@ -1,0 +1,50 @@
+\doxysection{utils.\+hpp}
+\hypertarget{utils_8hpp_source}{}\label{utils_8hpp_source}\index{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/utils.hpp@{/home/zuraw/Desktop/42-\/advanced-\/core/scop/src/utils/utils.hpp}}
+\mbox{\hyperlink{utils_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ SCOP\_MATRIXOPERATIONS\_HPP}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ SCOP\_MATRIXOPERATIONS\_HPP}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <GL/glew.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}../core/Object.hpp"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}../render/Renderer.hpp"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classObject}{Object}};}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRenderer}{Renderer}};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{double}\ toRadians(\textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ x)\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{return}\ x\ *\ (M\_PI\ /\ 180);}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Window\ utils}}
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8hpp_a75f161a826159ff1851ef0a98c787a3d}{processInput}}(GLFWwindow\ *window,\ std::unique\_ptr<Object>\ \&\textcolor{keywordtype}{object},\ \mbox{\hyperlink{classRenderer}{Renderer}}\ \&renderer,\ \textcolor{keywordtype}{double}\ deltaTIme);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ Matrix\ operations}}
+\DoxyCodeLine{00033\ std::array<float,\ 16>\ \mbox{\hyperlink{utils_8hpp_ac180e611998d6d9c55efa0cd55033f94}{getPerspective}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ fov,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ aspectRatio,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ near,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ far);}
+\DoxyCodeLine{00034\ std::array<float,\ 16>\ \mbox{\hyperlink{utils_8hpp_ae174908cce46421f38469803bfa59f5a}{translateMatrix}}(\textcolor{keyword}{const}\ std::array<float,\ 16>\ \&mat,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00035\ std::array<float,\ 16>\ \mbox{\hyperlink{utils_8hpp_a1e1e8660fcecd7c15f917a2a41102d2b}{scaleMatrix}}(\textcolor{keyword}{const}\ std::array<float,\ 16>\ \&matrix,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ scaleFactor);}
+\DoxyCodeLine{00036\ std::array<float,\ 16>\ \mbox{\hyperlink{utils_8hpp_a76d118ab7f488b1894ea56752c30fad2}{multiplyMatrix}}(\textcolor{keyword}{const}\ std::array<float,\ 16>\ \&mat1,\ \textcolor{keyword}{const}\ std::array<float,\ 16>\ \&mat2);}
+\DoxyCodeLine{00037\ std::array<float,\ 16>\ \mbox{\hyperlink{utils_8hpp_af7b80c3132eeb77e03594e884ad2aa92}{getRotationMatrixY}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ angle);}
+\DoxyCodeLine{00038\ std::array<float,\ 16>\ \mbox{\hyperlink{utils_8hpp_a1e1bbdd420829f16ffff997480c3cc30}{getIdentityMat4}}();}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8hpp_a89e39c082651b80483f72e5f8319df47}{printMatrix}}(\textcolor{keyword}{const}\ std::array<float,\ 16>\&\ mat,\ \textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{comment}{//\ Vector\ operations}}
+\DoxyCodeLine{00042\ std::array<float,\ 3>\ \mbox{\hyperlink{utils_8hpp_a1ceb84441ee1328801fd719d8b3bb40c}{subtractVec}}(\textcolor{keyword}{const}\ std::array<float,\ 3>\ \&a,\ \textcolor{keyword}{const}\ std::array<float,\ 3>\ \&b);}
+\DoxyCodeLine{00043\ std::array<float,\ 3>\ \mbox{\hyperlink{utils_8hpp_a2ee4703a6190ca3dd292bae5f26be183}{addVec}}(\textcolor{keyword}{const}\ std::array<float,\ 3>\ \&a,\ \textcolor{keyword}{const}\ std::array<float,\ 3>\ \&b);}
+\DoxyCodeLine{00044\ std::array<float,\ 3>\ \mbox{\hyperlink{utils_8hpp_a242aa56681b3b3c2c382ecb71aa277df}{normalizeVec}}(\textcolor{keyword}{const}\ std::array<float,\ 3>\ \&vec);}
+\DoxyCodeLine{00045\ std::array<float,\ 3>\ \mbox{\hyperlink{utils_8hpp_a2b4011ef615602166da022d080bfe141}{crossProdVec}}(\textcolor{keyword}{const}\ std::array<float,\ 3>\ \&a,\ \textcolor{keyword}{const}\ std::array<float,\ 3>\ \&b);}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{utils_8hpp_a763d705143c1f3dc35b336cfdc04fd34}{dotProdVec}}(\textcolor{keyword}{const}\ std::array<float,\ 3>\&\ a,\ \textcolor{keyword}{const}\ std::array<float,\ 3>\&\ b);}
+\DoxyCodeLine{00047\ std::array<float,\ 3>\ \mbox{\hyperlink{utils_8hpp_a6f9c9b93d61d589f2cd639696ee13c31}{multiplyVecByFloat}}(\textcolor{keyword}{const}\ std::array<float,\ 3>\ \&vec,\ \textcolor{keywordtype}{float}\ x);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{//\ Callbacks}}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8hpp_a09882d71c70e402a1d6179c914a001c2}{framebufferSizeCallback}}(GLFWwindow*\ window,\ \textcolor{keywordtype}{int}\ width,\ \textcolor{keywordtype}{int}\ height);}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8hpp_ae49f0c4c2064be8fbcf555f46460b7df}{cursorPosCallback}}(GLFWwindow*\ window,\ \textcolor{keywordtype}{double}\ xpos,\ \textcolor{keywordtype}{double}\ ypos);}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{utils_8hpp_aa9b224479e8c1cc5251b8e7f3fdabacd}{scrollCallback}}(GLFWwindow*\ window,\ \textcolor{keywordtype}{double}\ xoffset,\ \textcolor{keywordtype}{double}\ yoffset);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SCOP\_MATRIXOPERATIONS\_HPP}}
+
+\end{DoxyCode}
