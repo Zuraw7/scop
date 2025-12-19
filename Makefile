@@ -43,7 +43,7 @@ clean:
 	rm -rf $(OBJ_PATH)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) imgui.ini
 
 re: fclean all
 
