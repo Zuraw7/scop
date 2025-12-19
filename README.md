@@ -15,7 +15,7 @@ This project was entirely developed in C++ from scratch, including matrix operat
     - Camera rotation (left/right, up/down)
     - Zoom in/out
 - Rendering modes:
-    - Colored faces with distinguishable colors
+    - Shades of gray for object faces
     - Textured mode with smooth transition
     - Optional polygon mode (`glPolygonMode`) for wireframe rendering
 - Lighting:
