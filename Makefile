@@ -11,7 +11,7 @@ LIB_PATH = lib/
 OBJ_PATH = obj/
 
 # Libraries
-LIBS = -lGL -lGLEW -lglfw
+LIBS = -lGL ./lib/static/libGLEW.a ./lib/static/libglfw3.a
 
 # Source files
 SRC =  $(wildcard $(SRC_PATH)*.cpp) \
