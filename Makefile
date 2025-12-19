@@ -1,6 +1,6 @@
 # Compiler
 CXX = g++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++11 -g3 -Iinclude
+CXXFLAGS = -Wall -Wextra -Werror -std=c++11 -g3 -I./lib
 
 # Program name
 NAME = scop
